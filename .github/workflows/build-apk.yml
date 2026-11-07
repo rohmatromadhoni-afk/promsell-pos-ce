@@ -26,6 +26,17 @@ jobs:
       - run: dart run build_runner build --delete-conflicting-outputs
 
       - run: flutter build apk --debug
+      - name: Simpan log Gradle lengkap
+        if: failure()
+        working-directory: android
+        run: bash ./gradlew assembleDebug --stacktrace > ../gradle-log.txt 2>&1 || true
+
+      - name: Upload log Gradle
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gradle-log
+          path: gradle-log.txt
 
       - uses: actions/upload-artifact@v4
         with:

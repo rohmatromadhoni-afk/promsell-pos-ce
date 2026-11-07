@@ -125,7 +125,7 @@ class _ProductCsvImportPageState extends State<ProductCsvImportPage> {
       }
     } catch (_) {
       if (mounted) {
-        AppSnackBar.error(context, context.l10n.csvImportError);
+        AppSnackBar.error(context, '${l10n.csvImportError}\n${state.error}');
       }
     } finally {
       if (mounted) setState(() => _isSharingTemplate = false);

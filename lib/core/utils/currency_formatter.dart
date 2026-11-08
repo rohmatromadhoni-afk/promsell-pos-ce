@@ -4,36 +4,30 @@ import 'package:promsell_pos_ce/core/domain/money.dart';
 class CurrencyFormatter {
   CurrencyFormatter._();
 
-  static final _formatter = NumberFormat.currency(
-    locale: 'th_TH',
-    symbol: '฿',
-    decimalDigits: 2,
-  );
+  static const String _rupiah = 'Rp';
 
-  static final _formatterNoDecimal = NumberFormat.currency(
-    locale: 'th_TH',
-    symbol: '฿',
+  /// Rp 12.500 (tanpa desimal, pemisah ribuan titik)
+  static final _formatter = NumberFormat.currency(
+    locale: 'id_ID',
+    symbol: _rupiah,
     decimalDigits: 0,
   );
 
-  /// Grouped number with thousand separators, no currency symbol.
-  /// Example: `1234.5` → `1,234.50`
-  static final _groupedDecimal = NumberFormat('#,##0.00', 'en_US');
+  /// 12.500 (tanpa simbol)
+  static final _groupedInteger = NumberFormat('#,##0', 'id_ID');
 
-  /// Grouped integer with thousand separators.
-  /// Example: `12345` → `12,345`
-  static final _groupedInteger = NumberFormat('#,##0', 'en_US');
+  /// 12,5 (satu desimal, untuk ringkasan K/M)
+  static final _oneDecimal = NumberFormat('#,##0.0', 'id_ID');
 
   static String format(double amount) => _formatter.format(amount);
 
-  static String formatNoDecimal(double amount) =>
-      _formatterNoDecimal.format(amount);
+  static String formatNoDecimal(double amount) => _formatter.format(amount);
 
-  /// Formats [amount] with thousand separators and 2 decimal places.
-  static String formatGrouped(double amount) => _groupedDecimal.format(amount);
+  /// Angka dengan pemisah ribuan, tanpa simbol dan tanpa desimal.
+  /// Contoh: 12500 -> 12.500
+  static String formatGrouped(double amount) =>
+      _groupedInteger.format(amount.round());
 
-  /// Formats [amount] with thousand separators and a currency [symbol] prefix.
-  /// Example: symbol `฿`, amount `1500` → `฿1,500.00`
   static String formatGroupedWithSymbol(
     double amount,
     String symbol, {
@@ -41,48 +35,47 @@ class CurrencyFormatter {
   }) {
     final formatted = locale == null
         ? formatGrouped(amount)
-        : NumberFormat('#,##0.00', locale).format(amount);
+        : NumberFormat('#,##0', locale).format(amount.round());
     return '$symbol$formatted';
   }
 
-  /// Formats an integer quantity with thousand separators.
+  /// Angka bulat dengan pemisah ribuan.
   static String formatGroupedInt(int value) => _groupedInteger.format(value);
 
   static String formatCompact(double amount) {
     if (amount >= 1000000) {
-      return '฿${(amount / 1000000).toStringAsFixed(1)}M';
+      return '$_rupiah ${_oneDecimal.format(amount / 1000000)}M';
     } else if (amount >= 1000) {
-      return '฿${(amount / 1000).toStringAsFixed(1)}K';
+      return '$_rupiah ${_oneDecimal.format(amount / 1000)}K';
     }
     return format(amount);
   }
 
   static String formatCompactWithSymbol(double amount, String symbol) {
     if (amount >= 1000000) {
-      return '$symbol${(amount / 1000000).toStringAsFixed(1)}M';
+      return '$symbol${_oneDecimal.format(amount / 1000000)}M';
     } else if (amount >= 1000) {
-      return '$symbol${(amount / 1000).toStringAsFixed(1)}K';
+      return '$symbol${_oneDecimal.format(amount / 1000)}K';
     }
-    // Small values: show 2 decimals for consistency with format().
-    return '$symbol${amount.toStringAsFixed(2)}';
+    return '$symbol${_groupedInteger.format(amount.round())}';
   }
 
-  /// Formats a [Money] value using the standard Thai Baht format.
+  /// Formats a [Money] value dengan format Rupiah.
   static String formatMoney(Money money) => format(money.value);
 
-  /// Formats a [Money] value with no decimal places.
+  /// Formats a [Money] value tanpa desimal.
   static String formatMoneyNoDecimal(Money money) =>
       formatNoDecimal(money.value);
 
-  /// Formats a [Money] value in compact form (K/M suffix for large values).
+  /// Formats a [Money] value dalam bentuk ringkas (K/M).
   static String formatMoneyCompact(Money money) => formatCompact(money.value);
 
-  /// Formats a quantity with K/M suffix for large values.
+  /// Formats a quantity dengan K/M untuk angka besar.
   static String formatQuantityCompact(int qty) {
     if (qty >= 1000000) {
-      return '${(qty / 1000000).toStringAsFixed(1)}M';
+      return '${_oneDecimal.format(qty / 1000000)}M';
     } else if (qty >= 1000) {
-      return '${(qty / 1000).toStringAsFixed(1)}K';
+      return '${_oneDecimal.format(qty / 1000)}K';
     }
     return qty.toString();
   }

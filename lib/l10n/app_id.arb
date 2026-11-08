@@ -533,14 +533,6 @@
       }
     }
   },
-  "searchResultsCount": "{n} hasil",
-  "@searchResultsCount": {
-    "placeholders": {
-      "n": {
-        "type": "int"
-      }
-    }
-  },
   "confirmPaymentAmount": "Konfirmasi {currency}{amount}",
   "@confirmPaymentAmount": {
     "placeholders": {
@@ -800,5 +792,1479 @@
       "step": {"type": "int"},
       "total": {"type": "int"}
     }
-  }
+  },
+  "onboardingVatNoneHelp": "Tanpa PPN yang ditambahkan ke penjualan.",
+  "onboardingVatInclusiveHelp": "Harga yang ditampilkan sudah termasuk PPN.",
+  "onboardingVatExclusiveHelp": "PPN ditambahkan ke harga yang ditampilkan.",
+  "onboardingInvalidVatRate": "Masukkan tarif PPN antara 0 dan 30",
+  "onboardingPromptPaySecurity": "Opsional. Tersimpan di perangkat ini untuk membuat QR pembayaran.",
+  "onboardingCurrencyBaht": "Rp IDR",
+  "onboardingCurrencyUsd": "$ USD",
+  "onboardingCurrencyEur": "€ EUR",
+  "onboardingCurrencyJpy": "¥ JPY",
+  "onboardingSetupComplete": "Pengaturan selesai",
+  "onboardingSecurityProtected": "Dilindungi PIN Toko",
+  "onboardingSecurityNotProtected": "PIN Toko belum diatur",
+  "onboardingFirstSaleHint": "Langkah berikutnya: mulai transaksi pertama kamu.",
+  "onboardingSummaryStore": "Toko",
+  "onboardingSummaryCurrency": "Mata Uang",
+  "onboardingSummaryTax": "Pajak",
+  "dailyCloseLoadError": "Error: {message}",
+  "@dailyCloseLoadError": {
+    "placeholders": {
+      "message": {
+        "type": "String"
+      }
+    }
+  },
+  "dailyCloseSales": "Penjualan: {count}",
+  "@dailyCloseSales": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dailyCloseVoids": "Pembatalan: {count}",
+  "@dailyCloseVoids": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "settingsDailyCloseTitle": "Tutup Harian",
+  "settingsDailyCloseSubtitle": "Rekapitulasi transaksi akhir hari",
+  "settingsDbHealthTitle": "Kesehatan Database",
+  "settingsDbHealthSubtitle": "Ukuran, jumlah data, vacuum",
+  "settingsDailyCloseLockTitle": "Kunci transaksi setelah tutup hari",
+  "settingsDailyCloseLockSubtitle": "Saat aktif, transaksi baru diblokir jika hari ini sudah ditutup.",
+  "dbHealthVacuumSuccess": "Database berhasil di-vacuum",
+  "dbHealthVacuumFailed": "Vacuum gagal: {error}",
+  "@dbHealthVacuumFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "dbHealthError": "Error: {message}",
+  "@dbHealthError": {
+    "placeholders": {
+      "message": {
+        "type": "String"
+      }
+    }
+  },
+  "dayClosedMessage": "Hari telah ditutup. Buka kembali untuk melanjutkan.",
+  "tapToSet": "Ketuk untuk mengatur",
+  "@tapToSet": {},
+  "shopNameHint": "Masukkan nama toko",
+  "@shopNameHint": {},
+  "addressHint": "Masukkan alamat",
+  "@addressHint": {},
+  "phoneHint": "0812-3456-7890",
+  "@phoneHint": {},
+  "taxIdHint": "NPWP / ID Toko (contoh: 1234567890123)",
+  "@taxIdHint": {},
+  "categoryManagementTitle": "Kelola Kategori",
+  "noCategoriesYet": "Belum ada kategori",
+  "uncategorized": "Tanpa Kategori",
+  "searchCategories": "Cari kategori...",
+  "addCategory": "Tambah Kategori",
+  "editCategory": "Edit Kategori",
+  "deleteCategoryConfirm": "Konfirmasi hapus kategori?",
+  "deleteCategory": "Hapus Kategori",
+  "confirmDeleteCategory": "Apakah kamu yakin ingin menghapus \"{name}\"?",
+  "@confirmDeleteCategory": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "bulkDeleteConfirm": "Hapus {count} kategori?",
+  "@bulkDeleteConfirm": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "categoryName": "Nama kategori",
+  "categoryNameRequired": "Masukkan nama kategori",
+  "categoryNameExists": "Nama kategori sudah ada",
+  "categoryInUse": "Tidak dapat menghapus kategori yang masih berisi produk",
+  "chooseCategory": "Pilih Kategori",
+  "manageCategories": "Kelola Kategori",
+  "sortOrder": "Urutan tampil",
+  "sortOrderRequired": "Masukkan angka urutan",
+  "categoryColor": "Warna",
+  "categoryIcon": "Ikon",
+  "invalidNumber": "Angka tidak valid",
+  "addProductTitle": "Tambah Produk",
+  "noCategorySelected": "Belum memilih kategori",
+  "noProductsInCategory": "Tidak ada produk di kategori ini",
+  "noSearchResultsHint": "Coba kata kunci lain atau periksa ejaanmu.",
+  "clearFilters": "Hapus filter",
+  "selected": "dipilih",
+  "startTypingToSearch": "Mulai mengetik untuk mencari",
+  "searchByNameSkuBarcode": "Cari berdasarkan nama, SKU, atau barcode",
+  "tryDifferentKeyword": "Coba kata kunci yang berbeda",
+  "clearSearch": "Hapus pencarian",
+  "inactive": "Nonaktif",
+  "tapToZoom": "Ketuk untuk memperbesar",
+  "@tapToZoom": {},
+  "imageError": "Gagal memuat gambar",
+  "@imageError": {},
+  "productImageSemantics": "Gambar produk",
+  "@productImageSemantics": {},
+  "noProductImageSemantics": "Tidak ada gambar produk",
+  "@noProductImageSemantics": {},
+  "na": "N/A",
+  "skuLabel": "SKU",
+  "barcodeLabel": "Barcode",
+  "barcodeHint": "Contoh: 8990012345678",
+  "costLabel": "Modal ({currency})",
+  "@costLabel": {
+    "placeholders": {
+      "currency": {
+        "type": "String"
+      }
+    }
+  },
+  "costHelper": "Digunakan untuk menghitung laba kotor (opsional)",
+  "outOfStockShort": "Habis",
+  "productsCount": "Produk",
+  "lowStock": "Stok menipis",
+  "outOfStock": "Stok habis",
+  "saveDraft": "Simpan Draf",
+  "discardDraft": "Hapus Draf",
+  "restoreDraft": "Pulihkan draf?",
+  "draftSaved": "Draf disimpan",
+  "unsavedChangesMessage": "Ada perubahan yang belum disimpan",
+  "unsavedChangesTitle": "Perubahan Belum Disimpan",
+  "restore": "Pulihkan",
+  "scanBarcode": "Scan Barcode",
+  "barcodeScannerHint": "Posisikan barcode dalam bingkai",
+  "barcodeNotFound": "Produk dengan barcode ini tidak ditemukan",
+  "duplicateBarcode": "Barcode ini sudah digunakan",
+  "enterManually": "Ketik Manual",
+  "enterBarcodeManually": "Masukkan barcode secara manual",
+  "cameraPermissionDenied": "Izin kamera diperlukan untuk mengoscan barcode.",
+  "openSettings": "Buka Pengaturan",
+  "scanSuccess": "Scan berhasil",
+  "scanFromGallery": "Scan dari galeri",
+  "barcodeNotFoundInImage": "Barcode tidak ditemukan pada gambar",
+  "barcodeMustBeAlphanumeric": "Barcode harus berupa kombinasi huruf dan angka",
+  "scanningImage": "Memindai gambar...",
+  "continuousScan": "Scan beruntun",
+  "continuousScanHint": "Scan beberapa barang sekaligus tanpa menutup kamera",
+  "focusCamera": "Fokus",
+  "productFound": "{name} ditambahkan",
+  "@productFound": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "productNotFoundShort": "Produk tidak ditemukan",
+  "scanCount": "{count} terscan",
+  "@scanCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "done": "Selesai",
+  "torchOn": "Nyalakan lampu",
+  "torchOff": "Matikan lampu",
+  "submit": "Kirim",
+  "generateBarcode": "Buat Barcode",
+  "barcodeGenerated": "Barcode berhasil dibuat",
+  "barcodeGenerationError": "Gagal membuat barcode",
+  "generateSku": "Buat SKU",
+  "skuGenerated": "SKU berhasil dibuat",
+  "skuGenerationError": "Gagal membuat SKU",
+  "batchGenerateBarcodes": "Buat Barcode Masal",
+  "batchGenerateBarcodesHint": "Buat barcode otomatis untuk produk yang belum memiliki barcode",
+  "batchGenerateConfirmTitle": "Buat Barcode",
+  "batchGenerateConfirmBody": "Buat barcode EAN-13 untuk {count} produk tanpa barcode?",
+  "batchGenerateSuccess": "Berhasil membuat barcode untuk {count} produk",
+  "batchGenerateNone": "Semua produk sudah memiliki barcode",
+  "batchGenerateFailed": "Gagal membuat barcode masal",
+  "productsWithoutBarcode": "{count} produk tanpa barcode",
+  "barcodeSettings": "Pengaturan Barcode",
+  "enableBarcodeScan": "Aktifkan tombol scan di kasir",
+  "enableBarcodeScanHint": "Tampilkan tombol scan kamera di halaman kasir",
+  "playBeepOnScan": "Getar saat scan",
+  "playBeepOnScanHint": "Memberikan respon getar saat barcode berhasil dipindai",
+  "barcodePrefix": "Awalan Kode Otomatis",
+  "barcodePrefixHint": "Contoh: 200, 201 (1-3 digit angka untuk EAN-13)",
+  "barcodePrefixError": "Harus berupa 1-3 digit angka saja",
+  "barcodeFormats": "Format Scan",
+  "barcodeFormatsHint": "Pilih format barcode yang ingin dipindai",
+  "barcodeFormatEan13": "EAN-13",
+  "barcodeFormatEan8": "EAN-8",
+  "barcodeFormatUpcA": "UPC-A",
+  "barcodeFormatUpcE": "UPC-E",
+  "barcodeFormatCode128": "Code 128",
+  "barcodeFormatCode39": "Code 39",
+  "barcodeFormatItf": "ITF",
+  "barcodeFormatQrCode": "QR Code",
+  "barcodeFormatDataMatrix": "Data Matrix",
+  "barcodeFormatPdf417": "PDF417",
+  "barcodeFormatAztec": "Aztec",
+  "barcodeFormatCodabar": "Codabar",
+  "selectAll": "Pilih semua",
+  "deselectAll": "Batal pilih semua",
+  "barcodeAutoOpenManual": "Otomatis buka input manual",
+  "barcodeAutoOpenManualHint": "Buka kolom input manual jika scan gagal dalam batas waktu",
+  "disabled": "Nonaktif",
+  "secondsSuffix": "detik",
+  "barcodeHelpTitle": "Cara Penggunaan Barcode",
+  "barcodeHelpWhatIsTitle": "Apa itu barcode?",
+  "barcodeHelpWhatIsBody": "Barcode adalah kode unik berupa garis/angka pada kemasan produk. Kamu bisa mengoscan-nya dengan kamera untuk memasukkan produk ke keranjang secara cepat.",
+  "barcodeHelpHowToScanTitle": "Cara mengoscan",
+  "barcodeHelpHowToScanBody": "Arahkan kamera ke barcode produk. Pastikan pencahayaan cukup. Jika gagal, ketuk Ketik Manual.",
+  "barcodeHelpNoBarcodeTitle": "Produk tidak memiliki barcode?",
+  "barcodeHelpNoBarcodeBody": "Kamu bisa membuat barcode otomatis di dalam menu Tambah/Edit Produk.",
+  "barcodeHelper": "Scan atau ketik nomor barcode produk. Jika tidak ada, ketuk Buat Barcode.",
+  "skuHelper": "Kode unik internal toko (opsional). Contoh: SKU-001. Jika kosong, ketuk Buat SKU.",
+  "imagePicked": "Gambar ditambahkan",
+  "imagePickFailed": "Gagal menambahkan gambar. Silakan coba lagi.",
+  "storagePermissionDenied": "Izin penyimpanan dibutuhkan untuk mengambil gambar.",
+  "removeImageConfirm": "Hapus gambar ini?",
+  "imageHelper": "Ketuk untuk mengubah, tekan lama untuk pratinjau",
+  "tapToAddImage": "Ketuk untuk tambah gambar",
+  "imageNotFound": "Gambar tersimpan tidak ditemukan. Silakan pilih kembali.",
+  "clearImageCache": "Bersihkan cache gambar",
+  "clearImageCacheConfirm": "Ini akan menghapus semua cache gambar produk untuk menghemat memori.",
+  "imageCacheCleared": "Cache gambar berhasil dibersihkan",
+  "basic": "Dasar",
+  "advanced": "Lanjutan",
+  "settingsStoreSales": "Toko & Penjualan",
+  "settingsDiscounts": "Diskon",
+  "settingsAbout": "Tentang Aplikasi",
+  "aboutApp": "Tentang Aplikasi",
+  "appVersion": "Versi",
+  "appBuild": "Rilis",
+  "appDescription": "Aplikasi Kasir Mobile Offline-First untuk Toko & UMKM",
+  "builtWith": "Dibuat menggunakan",
+  "techStackFlutter": "Flutter",
+  "techStackDrift": "Drift SQLite",
+  "privacyPolicy": "Kebijakan Privasi",
+  "openSourceLicense": "Lisensi Open Source",
+  "crashLogs": "Log Kesalahan (Crash)",
+  "exportCrashLogs": "Ekspor Log Crash",
+  "clearCrashLogs": "Hapus Log Crash",
+  "clearCrashLogsConfirm": "Hapus semua catatan log kesalahan?",
+  "crashLogSize": "Ukuran file",
+  "crashLogEmpty": "Tidak ada log kesalahan",
+  "contactUs": "Hubungi Kami",
+  "agplLicense": "GNU Affero General Public License v3.0",
+  "agplShort": "AGPL-3.0",
+  "copyrightNotice": "© 2026 Promsell POS CE · AGPL-3.0",
+  "dataCollection": "Pengumpulan Data",
+  "dataCollectionBody": "Promsell POS tidak mengumpulkan atau mengirimkan data pribadi kamu ke server luar. Semua data transaksi tersimpan aman di HP kamu.",
+  "customerDataTitle": "Data Pelanggan",
+  "customerDataBody": "Nama, nomor telepon, dan riwayat belanja pelanggan tersimpan lokal di HP ini.",
+  "thirdPartyServices": "Layanan Pihak Ketiga",
+  "thirdPartyServicesBody": "Kami tidak menggunakan analitik, iklan, atau layanan cloud tersembunyi. Aplikasi berjalan 100% offline.",
+  "dataStorage": "Penyimpanan Data",
+  "dataStorageBody": "Data tetap di HP kamu. Kamu dapat mengekspor atau memulihkannya melalui menu Cadangan & Pemulihan.",
+  "backupEncryptionBody": "Ekspor database dilindungi enkripsi AES-256-GCM dengan PIN keamanan yang kamu tentukan.",
+  "permissionsTitle": "Izin Aplikasi",
+  "permissionsCamera": "Kamera: Digunakan untuk memfoto produk dan mengoscan barcode.",
+  "permissionsStorage": "Penyimpanan: Digunakan untuk menyimpan file backup dan struk.",
+  "permissionsInternet": "Internet: Opsional, hanya digunakan jika memuat URL gambar produk dari luar.",
+  "crashLoggingTitle": "Catatan Error",
+  "crashLoggingBody": "Jika terjadi kendala teknis, log error lokal disimpan otomatis tanpa membawa data sensitif toko kamu.",
+  "contactTitle": "Kontak",
+  "contactBody": "Pertanyaan & Dukungan: mnlizard.official@gmail.com",
+  "productPreviewSystemInfo": "Info Sistem",
+  "sellingPrice": "Harga Jual",
+  "priceHint": "Contoh: 15000",
+  "profit": "Laba (Keuntungan)",
+  "dateCreated": "Dibuat",
+  "dateUpdated": "Diperbarui",
+  "barcodeViewFull": "Lihat",
+  "barcodeSave": "Simpan",
+  "barcodePrint": "Cetak",
+  "productPreviewMargin": "Margin Laba",
+  "productPreviewStockValue": "Nilai Stok (Modal)",
+  "productPreviewStockValueSale": "Nilai Total Jual",
+  "productPreviewPotentialProfit": "Potensi Laba",
+  "productPreviewTotalSold": "Total Terjual",
+  "productPreviewTotalIn": "Total Stok Masuk",
+  "productPreviewTotalOut": "Total Penyesuaian Keluar",
+  "productPreviewLastUpdate": "Pembaruan Stok Terakhir",
+  "productPreviewRecentMoves": "Riwayat Pergerakan",
+  "productPreviewMarkup": "Persentase Margin Laba",
+  "productPreviewRoi": "Return on Investment (ROI)",
+  "productPreviewTotalRevenue": "Total Omset Stok",
+  "productPreviewTotalProfit": "Total Laba Stok",
+  "productPreviewStatus": "Status",
+  "productPreviewActive": "Aktif",
+  "productPreviewCost": "Modal",
+  "productPreviewBarcodeLabel": "Label Barcode",
+  "productPreviewProductId": "ID Produk",
+  "ok": "OK",
+  "close": "Tutup",
+  "invalidValue": "Nilai tidak valid",
+  "discountPresetAdded": "Menambahkan {label}",
+  "@discountPresetAdded": {
+    "placeholders": {
+      "label": {
+        "type": "String"
+      }
+    }
+  },
+  "discountPresetRemoved": "Menghapus {label}",
+  "@discountPresetRemoved": {
+    "placeholders": {
+      "label": {
+        "type": "String"
+      }
+    }
+  },
+  "unsupportedFormat": "Format tidak didukung",
+  "barcodeSavedSuccess": "Barcode berhasil disimpan",
+  "barcodePrintedSuccess": "Barcode berhasil dicetak",
+  "barcodeViewError": "Gagal menampilkan barcode",
+  "barcodeSaveError": "Gagal menyimpan barcode",
+  "barcodePrintError": "Gagal mencetak barcode",
+  "inventoryValue": "Total Nilai Inventaris",
+  "currencyBaht": "Rupiah",
+  "currencyDollar": "Dolar",
+  "currencyEuro": "Euro",
+  "currencyYen": "Yen",
+  "stockOnHand": "Stok Tersedia",
+  "piecesLabel": "pcs",
+  "totalProducts": "Total Produk",
+  "todayRevenue": "Omset Hari Ini",
+  "todaySalesCount": "Transaksi",
+  "cartItems": "Item",
+  "sortDefault": "Default",
+  "sortNameAsc": "Nama A-Z",
+  "sortPriceLowHigh": "Harga: Termurah",
+  "sortPriceHighLow": "Harga: Termahal",
+  "sortStockLowHigh": "Stok: Terikit",
+  "filterCategory": "Kategori",
+  "filterSort": "Urutkan",
+  "filterStock": "Stok",
+  "filterAll": "Semua",
+  "filterMore": "Filter",
+  "productRowMenuQty": "Atur jumlah",
+  "productRowMenuAdd": "Tambah ke keranjang",
+  "productRowMenu": "Aksi produk",
+  "cartBottomLabel": "Keranjang",
+  "saleCategoryTabsLabel": "Kategori",
+  "filterPageTitle": "Filter Produk",
+  "filterReset": "Hapus Filter",
+  "filterShowResults": "Tampilkan Hasil",
+  "filterShowResultsCount": "Tampilkan Hasil ({count})",
+  "@filterShowResultsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "filterDone": "Selesai",
+  "filterRemainingCount": "{count} item",
+  "@filterRemainingCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "filterPriceCustom": "Rentang harga khusus",
+  "filterPriceRange": "Harga",
+  "filterPriceMin": "Minimal",
+  "filterPriceMax": "Maksimal",
+  "filterCategoryChipHint": "Kategori berada pada bilah di atas",
+  "filterPriceOrderHint": "Harga Minimal harus ≤ Maksimal",
+  "filterPriceQuickUnder50": "≤ {currency}50rb",
+  "@filterPriceQuickUnder50": {
+    "placeholders": {
+      "currency": { "type": "String" }
+    }
+  },
+  "filterPriceQuick51to100": "{currency}50rb–100rb",
+  "@filterPriceQuick51to100": {
+    "placeholders": {
+      "currency": { "type": "String" }
+    }
+  },
+  "filterPriceQuick101to200": "{currency}100rb–200rb",
+  "@filterPriceQuick101to200": {
+    "placeholders": {
+      "currency": { "type": "String" }
+    }
+  },
+  "filterPriceQuickOver200": "≥ {currency}200rb",
+  "@filterPriceQuickOver200": {
+    "placeholders": {
+      "currency": { "type": "String" }
+    }
+  },
+  "sortChipDefault": "Default",
+  "sortChipName": "Nama",
+  "sortChipPriceAsc": "Harga ↑",
+  "sortChipPriceDesc": "Harga ↓",
+  "sortChipStock": "Stok",
+  "filterActiveCount": "{count} aktif",
+  "@filterActiveCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "businessType": "Tipe Usaha",
+  "businessTypeRetail": "Toko Retail / Sembako",
+  "businessTypeRestaurant": "Restoran / Kafe",
+  "businessTypeSubtitle": "Beralih antara mode retail dan mode restoran",
+  "serviceChargeRate": "Biaya Layanan / Service Charge (%)",
+  "serviceChargeRateSubtitle": "Persentase biaya layanan bawaan untuk pesanan restoran",
+  "orderType": "Tipe Pesanan",
+  "orderTypeDineIn": "Makan di Tempat (Dine In)",
+  "orderTypeTakeaway": "Bawa Pulang (Takeaway)",
+  "orderTypeDelivery": "Pengiriman (Delivery)",
+  "orderChannel": "Saluran Pesanan",
+  "orderChannelWalkIn": "Langsung (Walk-in)",
+  "orderChannelPhone": "Telepon",
+  "orderChannelOnline": "Online",
+  "guestCount": "Jumlah Pengunjung",
+  "guestCountHint": "Jumlah orang",
+  "sendToKitchen": "Kirim ke Dapur",
+  "kitchenTicket": "Struk Dapur",
+  "kitchenTicketEmpty": "Tidak ada pesanan baru untuk dikirim ke dapur",
+  "selectItemsForCheckout": "Pilih item untuk pembayaran sebagian",
+  "selectedItemsCount": "{count} item dipilih",
+  "@selectedItemsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "externalOrderRef": "No. Referensi Pesanan Luar",
+  "externalOrderRefHint": "Nomor pesanan aplikasi delivery (opsional)",
+  "serviceCharge": "Biaya Layanan",
+  "averageTransactionValue": "Rata-rata Transaksi",
+  "grossRevenue": "Pendapatan Kotor",
+  "promotionDiscount": "Diskon Promosi",
+  "orderTypeBreakdown": "Tipe Pesanan",
+  "orderChannelBreakdown": "Saluran Pesanan",
+  "peakHours": "Jam Ramai",
+  "uniqueCustomers": "Pelanggan Unik",
+  "repeatCustomers": "Pelanggan Setia",
+  "promotionOrders": "Pesanan Promosi",
+  "voidReasons": "Alasan Pembatalan",
+  "profitability": "Profitabilitas",
+  "grossProfit": "Laba Kotor",
+  "profitMargin": "Margin Laba",
+  "totalCost": "Total Modal",
+  "costCoverage": "Kelengkapan Data Modal",
+  "costCoverageIncomplete": "Data modal belum lengkap ({withCost}/{total} item)",
+  "costCoverageUnavailable": "Data modal tidak tersedia",
+  "insights": "Analisis Usaha",
+  "orderBreakdown": "Rincian Pesanan",
+  "tableSalesBreakdown": "Penjualan per Meja",
+  "tableNumber": "Meja",
+  "selectTable": "Pilih Meja",
+  "noTable": "Tanpa meja",
+  "restaurantSettings": "Pengaturan Restoran",
+  "tableManagement": "Kelola Meja",
+  "tableManagementSubtitle": "Atur denah meja dan area restoran",
+  "floorTitle": "Area",
+  "floorUnzoned": "Lainnya",
+  "transferTable": "Pindah Meja",
+  "transferTableTo": "Pindahkan {source} ke",
+  "noTransferTables": "Tidak ada meja kosong untuk dipindahkan.",
+  "tableTransferSuccess": "Meja berhasil dipindahkan ke {name}.",
+  "addTable": "Tambah Meja",
+  "editTable": "Edit Meja",
+  "deleteTable": "Hapus Meja",
+  "tableName": "Nama Meja",
+  "tableNameHint": "Contoh: Meja 01, VIP-1",
+  "tableZone": "Area / Zona",
+  "tableZoneHint": "Contoh: Dalam, Teras, Lanta 2",
+  "tableSeats": "Kapasitas Kursi",
+  "tableSeatsHint": "Jumlah kursi",
+  "tableStatusAvailable": "Tersedia",
+  "tableStatusOccupied": "Terisi",
+  "tableStatusReserved": "Dipesan (Reserved)",
+  "noTablesYet": "Belum ada meja. Tambahkan meja pertama kamu.",
+  "confirmDeleteTable": "Hapus meja ini?",
+  "selectTableForDineIn": "Pilih meja untuk pesanan ini",
+  "noTablesAvailable": "Belum ada meja yang diatur.",
+  "tableAlreadyBound": "Meja ini sedang digunakan.",
+  "tableChipLabel": "Meja {name}",
+  "@tableChipLabel": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "optionGroups": "Grup Varian / Opsi",
+  "optionGroupsSubtitle": "Tambah varian seperti ukuran, topping, atau level pedas",
+  "addOptionGroup": "Tambah Grup Varian",
+  "editOptionGroup": "Edit Grup Varian",
+  "optionGroupName": "Nama Grup Varian",
+  "optionGroupNameRequired": "Masukkan nama grup varian",
+  "optionGroupNameHint": "Contoh: Ukuran, Level Pedas, Topping",
+  "optionSelectionType": "Tipe Pilihan",
+  "optionSelectionSingle": "Pilih Satu",
+  "optionSelectionMultiple": "Bisa Pilih Banyak",
+  "optionRequired": "Wajib Pilih",
+  "optionOptional": "Opsional",
+  "addOption": "Tambah Opsi",
+  "editOption": "Edit Opsi",
+  "optionName": "Nama Opsi",
+  "optionNameHint": "Contoh: Sedang, Extra Shot, Tanpa Es",
+  "optionPriceDelta": "Penyesuaian Harga",
+  "optionPriceDeltaHint": "Biaya tambahan (bisa 0)",
+  "optionPriceDeltaHelper": "Ditambahkan ke harga dasar. Contoh: 2000 menambah 2.000 ke harga produk.",
+  "optionNameTooLong": "Nama opsi maksimal 100 karakter.",
+  "optionPriceInvalid": "Harga harus berupa angka yang valid.",
+  "optionPriceTooManyDecimals": "Harga maksimal 2 digit di belakang koma.",
+  "optionPriceTooLarge": "Biaya tambahan terlalu besar.",
+  "deleteOptionGroup": "Hapus Grup Varian",
+  "confirmDeleteOptionGroup": "Hapus grup varian ini beserta seluruh opsinya?",
+  "deleteOption": "Hapus Opsi",
+  "confirmDeleteOption": "Hapus opsi ini?",
+  "noOptionGroups": "Belum ada grup varian.",
+  "selectOptions": "Pilih Varian",
+  "optionsFor": "Varian untuk {product}",
+  "@optionsFor": {
+    "placeholders": {
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "optionRequiredMessage": "Silakan pilih varian untuk {group}",
+  "@optionRequiredMessage": {
+    "placeholders": {
+      "group": {
+        "type": "String"
+      }
+    }
+  },
+  "customersTitle": "Pelanggan",
+  "customerSaved": "Data pelanggan disimpan",
+  "addCustomer": "Tambah Pelanggan",
+  "editCustomerTitle": "Edit Pelanggan",
+  "customerNameLabel": "Nama",
+  "customerNameRequired": "Nama wajib diisi",
+  "customerPhoneLabel": "No. Telepon",
+  "customerEmailLabel": "Email",
+  "customerNoteLabel": "Catatan",
+  "customerNoteHint": "Tambah catatan khusus pelanggan...",
+  "customerInfoSection": "Informasi Pelanggan",
+  "customerNotesSection": "Catatan",
+  "customerStatisticsSection": "Statistik Pelanggan",
+  "customerTotalVisits": "Total Kunjungan",
+  "customerTotalSpent": "Total Belanja",
+  "deleteCustomerTitle": "Hapus Pelanggan",
+  "deleteCustomerConfirm": "Yakin hapus data pelanggan \"{name}\"?",
+  "@deleteCustomerConfirm": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "searchCustomers": "Cari pelanggan...",
+  "noCustomersYet": "Belum ada data pelanggan",
+  "noCustomersFound": "Pelanggan tidak ditemukan",
+  "addFirstCustomer": "Tambahkan pelanggan pertama kamu untuk mencatat riwayat belanjanya",
+  "customerVisits": "{count} kunjungan",
+  "@customerVisits": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "selectCustomer": "Pilih pelanggan",
+  "clearCustomer": "Hapus pelanggan",
+  "noCustomer": "Tanpa pelanggan",
+  "receiptLabelCustomer": "Pelanggan",
+  "selectPromotion": "Pilih promosi",
+  "clearPromotion": "Hapus promosi",
+  "noActivePromotions": "Tidak ada promosi aktif",
+  "promotionNotFound": "Promosi tidak ditemukan atau nonaktif",
+  "receiptLabelPromotion": "Promosi",
+  "receiptLabelPromotionDiscount": "Diskon Promo",
+  "customerNotFound": "Data pelanggan tidak ditemukan",
+  "insufficientStock": "Stok tidak mencukupi",
+  "productNotFound": "Produk tidak ditemukan",
+  "productInactive": "Produk nonaktif",
+  "saleNotFound": "Penjualan tidak ditemukan",
+  "saleAlreadyVoided": "Penjualan sudah dibatalkan sebelumnya",
+  "notFound": "Tidak Ditemukan",
+  "validationError": "Gagal Validasi",
+  "databaseError": "Gagal Database",
+  "backupFailed": "Gagal membuat cadangan",
+  "backupShareSubject": "Cadangan Promsell POS",
+  "backupPinTitle": "PIN Enkripsi Cadangan",
+  "backupPinHint": "Masukkan PIN untuk mengamankan cadangan",
+  "backupPinRequired": "PIN wajib diisi saat enkripsi aktif",
+  "backupPinTooShort": "PIN minimal 6 karakter",
+  "backupPinConfirmHint": "Konfirmasi PIN",
+  "backupPinMismatch": "PIN tidak cocok",
+  "backupEncryptionOffTitle": "Matikan enkripsi cadangan?",
+  "backupEncryptionOffConfirm": "File cadangan tanpa enkripsi lebih berisiko jika diambil orang lain. Kamu bisa mengaktifkannya kembali nanti.",
+  "customerSpentLabel": "Total belanja {amount}",
+  "@customerSpentLabel": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "tryDifferentSearch": "Coba kata kunci pencarian yang lain",
+  "promotionsTitle": "Promosi / Diskon",
+  "promotionSaved": "Promosi disimpan",
+  "addPromotion": "Tambah Promosi",
+  "editPromotionTitle": "Edit Promosi",
+  "promotionNameLabel": "Nama Promosi",
+  "promotionNameRequired": "Nama promosi wajib diisi",
+  "promotionValueLabel": "Diskon (%)",
+  "promotionAmountLabel": "Nominal Diskon",
+  "promotionValueRequired": "Nilai diskon wajib diisi",
+  "promotionValueInvalid": "Masukkan nilai yang valid",
+  "promotionPercentMax": "Persentase diskon tidak boleh lebih dari 100%",
+  "promotionMinPurchaseLabel": "Minimal Pembelian",
+  "promotionMinPurchaseHint": "0 = tanpa minimal",
+  "promotionDetailsSection": "Detail Promosi",
+  "promotionScheduleSection": "Jadwal Promosi",
+  "promotionStatusSection": "Status",
+  "promotionStartDate": "Tanggal Mulai",
+  "promotionEndDate": "Tanggal Selesai",
+  "promotionNoEndDate": "Tanpa batas waktu",
+  "promotionActive": "Aktif",
+  "promotionInactive": "Nonaktif",
+  "promotionActiveDesc": "Promosi ini sedang berjalan",
+  "promotionInactiveDesc": "Promosi ini dinonaktifkan",
+  "promotionPercentage": "Persentase (%)",
+  "promotionFixedAmount": "Nominal Tetap (Rp)",
+  "deletePromotionTitle": "Hapus Promosi",
+  "deletePromotionConfirm": "Yakin hapus promosi \"{name}\"?",
+  "@deletePromotionConfirm": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "searchPromotions": "Cari promosi...",
+  "noPromotionsYet": "Belum ada promosi",
+  "noPromotionsFound": "Promosi tidak ditemukan",
+  "addFirstPromotion": "Buat promosi pertama kamu untuk menarik pelanggan",
+  "promotionPercentOff": "Diskon {value}%",
+  "@promotionPercentOff": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "promotionAmountOff": "Potongan {value}",
+  "@promotionAmountOff": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "promotionMinPurchase": "Min. belanja: {amount}",
+  "@promotionMinPurchase": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "homeGreeting": "Halo, {shopName}",
+  "@homeGreeting": {
+    "placeholders": {
+      "shopName": {
+        "type": "String"
+      }
+    }
+  },
+  "homeSubtitle": "Mari capai target penjualan hari ini!",
+  "homeTodayRevenue": "Pendapatan Hari Ini",
+  "homeVsYesterday": "vs kemarin",
+  "homeRevenue": "Omset",
+  "homeCost": "Modal",
+  "homeProfit": "Laba",
+  "homeMainMenu": "Menu Utama",
+  "homeHistory": "Riwayat",
+  "homeCloseDay": "Tutup Hari",
+  "homePromotionBannerCta": "Buat Sekarang",
+  "homeCreatePromotion": "Buat Promosi",
+  "importProducts": "Impor Produk",
+  "productTabAll": "Semua",
+  "productTabCategory": "Kategori",
+  "productTabStock": "Stok",
+  "productMenuEdit": "Edit",
+  "productMenuPreview": "Pratinjau",
+  "importFromCsv": "Impor dari File CSV",
+  "selectCsvFile": "Pilih File CSV",
+  "csvImportPreview": "Pratinjau data impor",
+  "confirmImport": "Konfirmasi Impor",
+  "importSuccess": "Berhasil mengimpor {count} produk",
+  "@importSuccess": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importError": "Gagal mengimpor produk",
+  "csvImportError": "Gagal membaca file CSV",
+  "csvNoData": "Tidak ada data pada file CSV",
+  "csvInvalidFormat": "Format file tidak valid",
+  "csvInvalidEncoding": "File bukan UTF-8 yang valid. Simpan CSV dengan enkoding UTF-8.",
+  "csvFileTooLarge": "Ukuran file terlalu besar (maksimal {maxMb} MB)",
+  "@csvFileTooLarge": {
+    "placeholders": {
+      "maxMb": {
+        "type": "int"
+      }
+    }
+  },
+  "csvTooManyRows": "Baris terlalu banyak (maksimal {maxRows})",
+  "@csvTooManyRows": {
+    "placeholders": {
+      "maxRows": {
+        "type": "int"
+      }
+    }
+  },
+  "csvRowErrorsSkipped": "{count} baris error akan dilewati",
+  "@csvRowErrorsSkipped": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "csvImportPartialSuccess": "{imported} berhasil diimpor; {errors} baris gagal",
+  "@csvImportPartialSuccess": {
+    "placeholders": {
+      "imported": {
+        "type": "int"
+      },
+      "errors": {
+        "type": "int"
+      }
+    }
+  },
+  "csvImportCategoriesCreated": "{count} kategori baru dibuat",
+  "@csvImportCategoriesCreated": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "csvDownloadTemplate": "Unduh contoh template",
+  "csvColumnLegend": "Wajib: name, price. Opsional: sku, barcode, cost, stock, category, track_stock",
+  "csvImporting": "Mengimpor…",
+  "csvRowLabel": "Baris {row}: {message}",
+  "@csvRowLabel": {
+    "placeholders": {
+      "row": {
+        "type": "int"
+      },
+      "message": {
+        "type": "String"
+      }
+    }
+  },
+  "csvTemplateShared": "Template siap dibagikan",
+  "csvParseErrorsTitle": "Baris yang akan dilewati",
+  "csvPostImportErrorsTitle": "Baris yang gagal diimpor",
+  "homePromotionBannerSubtitle": "Tingkatkan penjualan tokomu dengan mudah",
+  "homeNoActivePromotion": "Belum ada promosi yang aktif",
+  "homePromotionOff": "MATI",
+  "homeFromBills": "dari {count} transaksi",
+  "@homeFromBills": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "productDetailTitle": "Detail Produk",
+  "productTabInfo": "Info Produk",
+  "productTabHistory": "Riwayat",
+  "productDescriptionLabel": "Deskripsi",
+  "productDescriptionEmpty": "Tidak ada deskripsi",
+  "productUnitLabel": "Satuan",
+  "productUnitDefault": "pcs",
+  "productTabPointOfSale": "Kasir",
+  "productTabPriceStock": "Harga & Stok",
+  "productTabCodesMore": "Kode & Lainnya",
+  "productRecommended": "Produk Rekomendasi",
+  "productUnitOther": "Lainnya",
+  "productCustomUnit": "Satuan Kustom",
+  "productTaxLabel": "Pajak",
+  "productWeightLabel": "Berat",
+  "productSizeLabel": "Ukuran",
+  "productBrandLabel": "Merek",
+  "productSupplierLabel": "Pemasok / Supplier",
+  "copyBarcode": "Salin Barcode",
+  "printBarcode": "Cetak Barcode",
+  "productAdjustStock": "Sesuaikan Stok",
+  "productNoHistory": "Belum ada riwayat pergerakan stok",
+  "normalProduct": "Produk Normal",
+  "readyToSell": "Siap Dijual",
+  "retailPrice": "Harga Eceran",
+  "averageCost": "Rata-rata Modal",
+  "averageProfit": "Rata-rata Laba",
+  "remainingStock": "Sisa Stok",
+  "moveProduct": "Pindahkan Produk",
+  "editProduct": "Edit Produk",
+  "pieces": "{count} pcs",
+  "@pieces": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "resourceNotFound": "{resource} tidak ditemukan",
+  "@resourceNotFound": {
+    "placeholders": {
+      "resource": {
+        "type": "String"
+      }
+    }
+  },
+  "resourceNotFoundWithId": "{resource} tidak ditemukan (ID: {id})",
+  "@resourceNotFoundWithId": {
+    "placeholders": {
+      "resource": {
+        "type": "String"
+      },
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "businessRuleViolation": "Pelanggaran Aturan Usaha",
+  "networkError": "Gagal Jaringan",
+  "networkErrorDefault": "Gagal jaringan (status: {code})",
+  "@networkErrorDefault": {
+    "placeholders": {
+      "code": {
+        "type": "int"
+      }
+    }
+  },
+  "fileSystemError": "Gagal Sistem File",
+  "permissionDenied": "Izin Ditolak",
+  "permissionDeniedMessage": "Silakan berikan izin {permission}",
+  "@permissionDeniedMessage": {
+    "placeholders": {
+      "permission": {
+        "type": "String"
+      }
+    }
+  },
+  "unexpectedError": "Terjadi Kesalahan Tak Terduga",
+  "invalidDiscount": "Nilai diskon tidak valid",
+  "negativePriceNotAllowed": "Harga negatif tidak diperbolehkan",
+  "homeLoadError": "Gagal memuat data",
+  "productFormSectionGeneral": "Umum",
+  "productFormSectionPricing": "Harga & Modal",
+  "productFormSectionStock": "Stok & Satuan",
+  "productFormSectionSettings": "Pengaturan",
+  "productFormSectionExtra": "Detail Tambahan",
+  "profitMargin": "Margin",
+  "notSpecified": "Tidak ditentukan",
+  "saveProduct": "Simpan Produk",
+  "discardChanges": "Jangan Simpan",
+  "unsavedChangesMessageCreate": "Keluar tanpa menyimpan? Kamu bisa memulihkan draf ini nanti.",
+  "unsavedChangesMessageEdit": "Ada perubahan yang belum disimpan. Keluar tanpa menyimpan?",
+  "costExceedsPriceWarning": "Modal lebih tinggi dari harga jual — laba minus",
+  "priceStockEstimateTitle": "Estimasi jika semua stok terjual",
+  "priceStockEstimateRevenue": "Estimasi Omset",
+  "priceStockEstimateProfit": "Estimasi Laba",
+  "editStockAdjustHint": "Ubah jumlah dengan Sesuaikan Stok agar tercatat di log.",
+  "lowStockThresholdHint": "Peringatan stok menipis pada {n}",
+  "@lowStockThresholdHint": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "stockInventoryValueTitle": "Nilai inventaris",
+  "adjustModeAdd": "Tambah",
+  "adjustModeRemove": "Kurangi",
+  "adjustQtyAmountLabel": "Jumlah",
+  "adjustCurrentStock": "Stok saat ini: {qty} {unit}",
+  "@adjustCurrentStock": {
+    "placeholders": {
+      "qty": {
+        "type": "String"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "adjustPreviewResult": "{from} → {to} {unit}",
+  "@adjustPreviewResult": {
+    "placeholders": {
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "adjustWouldGoNegative": "Stok tidak mencukupi untuk pengurangan ini",
+  "adjustReasonRestock": "Stok Masuk / Kulakan",
+  "adjustReasonDamaged": "Rusak / Kadaluwarsa",
+  "adjustReasonLost": "Hilang",
+  "adjustReasonCountCorrection": "Koreksi Stok Opnam",
+  "adjustReasonReturn": "Pengembalian dari Pelanggan",
+  "adjustReasonOther": "Lainnya",
+  "adjustReasonOtherHint": "Jelaskan alasannya",
+  "editLowStockThreshold": "Edit batas stok",
+  "lowStockThresholdSaved": "Batas peringatan stok menipis diperbarui",
+  "createProductFromBarcode": "Buat produk baru",
+  "scanAgainToAdd": "Produk disimpan — scan kembali untuk menambah ke keranjang",
+  "productCreatedAddedToCart": "Produk dibuat dan dimasukkan ke keranjang",
+  "barcodeReplaceTitle": "Ganti barcode?",
+  "barcodeReplaceMessage": "Kode saat ini: {code}. Kode baru akan menggantikannya.",
+  "@barcodeReplaceMessage": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "skuReplaceTitle": "Ganti SKU?",
+  "skuReplaceMessage": "Kode saat ini: {code}. Kode baru akan menggantikannya.",
+  "@skuReplaceMessage": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "barcodePreviewEmpty": "Pratinjau akan muncul saat kamu mengeset barcode",
+  "scanModeContinuous": "Beruntun",
+  "scanModeSingle": "Satu per Satu",
+  "searchMatchName": "Nama",
+  "searchMatchSku": "SKU",
+  "searchMatchBarcode": "Barcode",
+  "searchResultCount": "{count} hasil",
+  "@searchResultCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "searchFiltersIgnoredHint": "Menampilkan semua hasil yang cocok",
+  "searchShowingCount": "Menampilkan {shown} dari {total}",
+  "@searchShowingCount": {
+    "placeholders": {
+      "shown": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "barcodeAmbiguousCount": "{count} produk menggunakan barcode yang sama",
+  "@barcodeAmbiguousCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "cartBillDetails": "Rincian Tagihan",
+  "cartHoldBill": "Tagihan Tersimpan",
+  "cartItemCount": "{count} item",
+  "@cartItemCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "cartActiveBill": "Tagihan: {name}",
+  "@cartActiveBill": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "heroNoBarcode": "Tanpa barcode",
+  "setSellingPrice": "Atur harga",
+  "showProductHint": "Tampil di katalog dan daftar produk saat aktif",
+  "productRecommendedHint": "Ditampilkan di urutan paling atas katalog kasir",
+  "productBrandHint": "Nama merek atau produsen (opsional)",
+  "productDescriptionHint": "Catatan internal toko (tidak muncul di struk)",
+  "productFormSectionVisibility": "Visibilitas",
+  "productSettingsOutcomeVisible": "Dijual",
+  "productSettingsOutcomeHidden": "Disembunyikan",
+  "productSettingsOutcomeRecommended": "Direkomendasikan",
+  "productSettingsOutcomeNotRecommended": "Tidak direkomendasikan",
+  "productRecommendedNeedsVisible": "Produk rekomendasi harus diatur Tampilkan Produk.",
+  "saleRecommendedFilter": "Rekomendasi",
+  "saleRecommendedFilterAll": "Semua Item",
+  "productSupplierHint": "Pemasok / tempat kulakan produk ini (opsional)",
+  "productOptionsSummaryTitle": "Varian",
+  "productOptionGroupSummary": "{name} · {detail} · {count} opsi",
+  "@productOptionGroupSummary": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "detail": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "productFormCostEmptyHint": "Isi modal untuk melihat estimasi laba kotor",
+  "productFormMarkupFromCost": "Set harga berdasarkan modal",
+  "productFormPriceChanged": "{from} → {to}",
+  "@productFormPriceChanged": {
+    "placeholders": {
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      }
+    }
+  },
+  "clearFieldTitle": "Hapus teks?",
+  "clearFieldConfirm": "Ini akan menghapus isi teks pada kolom ini. Lanjutkan?",
+  "deleteProductConfirmTitle": "Hapus produk ini?",
+  "removeCartLineTitle": "Hapus item ini dari tagihan?",
+  "removeCartLineQty": "Jumlah {count}",
+  "@removeCartLineQty": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "removeCartLineConfirm": "Hapus item",
+  "datePresetToday": "Hari Ini",
+  "datePresetYesterday": "Kemarin",
+  "datePresetLast7Days": "7 Hari Terakhir",
+  "datePresetThisMonth": "Bulan Ini",
+  "datePresetCustom": "Pilih Tanggal",
+  "dateFilterSheetTitle": "Pilih rentang tanggal",
+  "dateFilterSheetSubtitle": "Pilih periode cepat atau pilih tanggal sendiri",
+  "dateFilterCategoryTile": "Kategori Waktu",
+  "dateFilterCategoryDesc": "Hari Ini • Kemarin • 7 Hari Terakhir • Bulan Ini",
+  "dateFilterCustomTile": "Khusus",
+  "dateFilterCustomDesc": "Tentukan tanggal mulai dan selesai",
+  "dateFilterCustomPick": "Pilih rentang tanggal",
+  "dateFilterCustomChange": "Ubah rentang tanggal",
+  "dateFilterCustomApply": "Gunakan rentang ini",
+  "dateFilterCustomCurrent": "Rentang dipilih",
+  "dateFilterPickYear": "Pilih tahun",
+  "dateFilterPickMonth": "Pilih bulan",
+  "dateFilterSelectYear": "Pilih tahun ini",
+  "dateFilterSelectMonth": "Pilih bulan ini",
+  "dateFilterThisYear": "Tahun ini",
+  "dateFilterLastYear": "Tahun lalu",
+  "dateFilterThisMonth": "Bulan ini",
+  "dateFilterUseToday": "Set ke hari ini",
+  "dateFilterTipTitle": "Tips",
+  "dateFilterTipBody": "Gunakan periode cepat untuk melihat rekapitulasi harian/mingguan dengan praktis.",
+  "reportAverage": "Rata-rata",
+  "reportRecent": "Terbaru",
+  "paymentMethodShare": "{percent}%",
+  "@paymentMethodShare": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "closeDayToday": "Tutup hari ini",
+  "dailyCloseSummaryTitle": "Ringkasan",
+  "dailyCloseSalesCountLabel": "Total Transaksi",
+  "dailyCloseVoidedCountLabel": "Total Pembatalan",
+  "dailyCloseGrossRevenue": "Pendapatan Kotor",
+  "dailyCloseVoidedAmount": "Nominal Pembatalan",
+  "dailyCloseByPayment": "Berdasarkan Pembayaran",
+  "dailyCloseVatCollected": "PPN Terkumpul",
+  "dailyCloseDiscountsGiven": "Diskon Diberikan",
+  "dailyCloseCashReconciliation": "Rekapitulasi Uang Tunai",
+  "dailyCloseOpeningCash": "Kas Awal (Modal Kasir)",
+  "dailyCloseExpectedCash": "Estimasi Kas Di Tangan",
+  "dailyCloseCountedCash": "Kas Hasil Perhitungan",
+  "dailyCloseOverShort": "Selisih (Lebih / Kurang)",
+  "dailyCloseNoteOptional": "Catatan (opsional)",
+  "dailyCloseStatusOpen": "Buka",
+  "dailyCloseStatusClosed": "Ditutup",
+  "dailyCloseStatusClosedBadge": "DITUTUP",
+  "dailyCloseStatusOpenBadge": "BUKA",
+  "dailyCloseStatusNeedsAttention": "Perlu Perhatian",
+  "dailyCloseOverAmount": "Lebih {amount}",
+  "dailyCloseShortAmount": "Kurang {amount}",
+  "dailyCloseNoMismatch": "Uang tunai sesuai estimasi",
+  "dailyCloseCalculating": "Menghitung data penjualan…",
+  "dailyCloseClosing": "Menutup transaksi hari ini…",
+  "dailyCloseReopening": "Membuka kembali transaksi hari ini…",
+  "noCategoriesFound": "Kategori tidak ditemukan",
+  "categorySaved": "Kategori disimpan",
+  "categoryDeleted": "Kategori dihapus",
+  "categoriesDeleted": "{count} kategori dihapus",
+  "@categoriesDeleted": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "categoryReorderHint": "Geser untuk mengatur urutan tampilan di kasir",
+  "deleteCategoryProductsImpact": "{count} produk akan dipindahkan ke Tanpa Kategori.",
+  "@deleteCategoryProductsImpact": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "categoryNameTooLong": "Nama maksimal 100 karakter",
+  "goToSale": "Ke Layar Kasir",
+  "closeDayForDate": "Tutup hari {date}",
+  "@closeDayForDate": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "reportNoSalesInPeriod": "Belum ada transaksi pada periode ini",
+  "reportEmptyDesc": "Coba ubah rentang tanggal atau mulai lakukan transaksi untuk melihat laporan.",
+  "reportErrorDesc": "Gagal memuat data laporan.",
+  "reportLoadingDesc": "Mengambil data penjualan...",
+  "currentBill": "Tagihan saat ini",
+  "currentBillWithCount": "Tagihan ({count})",
+  "@currentBillWithCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "saleBillAt": "Tagihan #{count}",
+  "@saleBillAt": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "productCountAt": "{count} produk",
+  "@productCountAt": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "viewBill": "Tagihan",
+  "viewBillWithCount": "Tagihan ({count})",
+  "@viewBillWithCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "draftNotFound": "Tagihan tertunda tidak ditemukan",
+  "maxDraftsReached": "Batas maksimal tagihan tertunda ({count}) tercapai",
+  "@maxDraftsReached": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "addToCart": "Tambah ke keranjang",
+  "holdCurrentBill": "Simpan tagihan ini",
+  "newBill": "Tagihan baru",
+  "billHeld": "Tagihan berhasil disimpan",
+  "newBillConfirm": "Simpan tagihan saat ini dan buat tagihan baru yang kosong?",
+  "newBillStarted": "Tagihan baru dimulai",
+  "voidBlockedDayClosed": "Hari sudah ditutup. Buka kembali hari untuk membatalkan transaksi.",
+  "billParked": "Tagihan disimpan — siap melayani pelanggan berikutnya.",
+  "receiptThankYouDefault": "Terima Kasih!",
+  "receiptNotTaxInvoice": "Bukti Pembayaran / Struk belanja",
+  "receiptTaxId": "NPWP",
+  "receiptReprint": "CETAK ULANG",
+  "receiptShareVoidBlocked": "Transaksi yang dibatalkan tidak dapat dibagikan sebagai struk normal.",
+  "parkBill": "Simpan / Parkir Tagihan",
+  "parkBillConfirmTitle": "Simpan tagihan ini?",
+  "parkBillConfirmMessage": "Simpan keranjang ini dan buka tagihan baru untuk pelanggan berikutnya.",
+  "parkBillNameTitle": "Beri nama tagihan (opsional)",
+  "currentBillNamed": "{name} ({count})",
+  "@currentBillNamed": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "amountDue": "Total Tagihan",
+  "payAmount": "Bayar {amount}",
+  "@payAmount": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "parkAndNext": "Simpan & Lanjut",
+  "openBillsCount": "Tagihan Tertunda ({count})",
+  "@openBillsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "billItemsMissing": "{count} item tidak ditemukan (produk telah dihapus)",
+  "@billItemsMissing": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "splitTenderTitle": "Pembayaran Campuran (Tunai + Lainnya)",
+  "splitTenderSubtitle": "Bayar sebagian tunai dan sisanya via QRIS/Transfer/Kartu",
+  "splitCashAmount": "Nominal Tunai",
+  "paymentMismatch": "Jumlah pembayaran tidak sesuai dengan total tagihan",
+  "paymentMixed": "Pembayaran Campuran",
+  "promptPayShareTitle": "Bagikan QRIS",
+  "promptPayShareHint": "Scan hanya untuk bagian pembayaran QRIS.",
+  "promptPayFullBillTitle": "Bayar dengan QRIS",
+  "settingsAttentionItemsCount": "{count} pengaturan butuh perhatian kamu",
+  "@settingsAttentionItemsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "settingsAttentionShopTitle": "Lengkapi Profil Toko",
+  "settingsAttentionShopBody": "Isi nama toko dan no. telp agar struk belanja tampil rapi.",
+  "settingsAttentionPromptpayTitle": "Atur QRIS / Transfer",
+  "settingsAttentionPromptpayBody": "Masukkan ID QRIS/Rekening untuk menerima pembayaran QR.",
+  "settingsAttentionReview": "Periksa",
+  "settingsDayClose": "Tutup Hari",
+  "settingsBackupData": "Cadangan & Data",
+  "settingsPreview": "Pratinjau {section}",
+  "@settingsPreview": {
+    "placeholders": {
+      "section": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsModeLabel": "Mode",
+  "settingsCatalogMode": "Katalog",
+  "shopNamePlaceholder": "Nama Toko Kamu",
+  "shopAddressPlaceholder": "Alamat belum diatur",
+  "shopPhonePlaceholder": "No. telepon belum diatur",
+  "settingsDetails": "Detail",
+  "settingsPolicy": "Kebijakan",
+  "settingsOn": "Aktif",
+  "settingsOff": "Mati",
+  "cartPaymentInProgress": "Proses pembayaran berlangsung — keranjang dikunci",
+  "backupRestoreTitle": "Pulihkan Cadangan (HP Ini)",
+  "backupRestoreConfirmTitle": "Pulihkan data dari cadangan?",
+  "backupRestoreConfirmMessage": "Ini akan menimpa data toko saat ini dengan file cadangan.",
+  "backupRestoreSuccess": "Pemulihan selesai. Silakan tutup dan buka kembali aplikasi.",
+  "backupRestorePlainUnsupported": "File cadangan tidak didukung.",
+  "backupRestoreInvalid": "File cadangan tidak valid.",
+  "backupRestoreSourceMissing": "File cadangan tidak ditemukan.",
+  "backupConfirmExportTitle": "Konfirmasi Ekspor Cadangan",
+  "backupConfirmRestoreTitle": "Konfirmasi Pemulihan Cadangan",
+  "appLockTitle": "Kunci PIN Toko",
+  "appLockSubtitle": "Lindungi pembatalan, ekspor data, edit stok, dan QRIS dengan PIN",
+  "appLockSectionTitle": "Aksi Sensitif",
+  "appLockRequirePin": "Wajibkan PIN Toko",
+  "appLockRequirePinHint": "Saat aktif, fitur pembatalan, ekspor/pemulihan, edit stok, dan ubah QRIS memerlukan PIN.",
+  "@appLockRequirePinHint": {
+    "placeholders": {
+      "minutes": { "type": "int" }
+    }
+  },
+  "appLockCreatePin": "Buat PIN Toko",
+  "appLockEnterPin": "Masukkan PIN Toko",
+  "appLockConfirmPin": "Konfirmasi PIN",
+  "appLockPinLabel": "PIN",
+  "appLockUnlock": "Buka Kunci",
+  "appLockEnabled": "PIN Toko aktif",
+  "appLockDisabled": "PIN Toko nonaktif",
+  "appLockEnableFailed": "Gagal mengaktifkan PIN Toko",
+  "appLockDisableNeedsPin": "Membutuhkan PIN untuk menonaktifkan",
+  "appLockPinTooShort": "PIN minimal {min} digit",
+  "@appLockPinTooShort": {
+    "placeholders": {
+      "min": { "type": "int" }
+    }
+  },
+  "appLockPinTooTrivial": "PIN terlalu mudah ditebak — pilih kombinasi lain",
+  "appLockIncorrectPin": "PIN salah",
+  "appLockActionRequired": "Aksi ini memerlukan PIN Toko",
+  "appLockConfirmVoid": "Konfirmasi pembatalan dengan PIN Toko",
+  "appLockConfirmPromptPay": "Konfirmasi perubahan QRIS dengan PIN Toko",
+  "appLockConfirmStock": "Konfirmasi ubah stok dengan PIN Toko",
+  "appLockConfirmCsv": "Konfirmasi impor CSV dengan PIN Toko",
+  "appLockPinsMismatch": "PIN tidak cocok",
+  "appLockLockedOut": "Terlalu banyak percobaan. Coba lagi dalam {seconds} dtk",
+  "@appLockLockedOut": {
+    "placeholders": {
+      "seconds": { "type": "int" }
+    }
+  },
+  "appLockEnterCurrentPin": "Masukkan PIN saat ini",
+  "appLockChangePin": "Ubah PIN",
+  "appLockChangePinHint": "Membutuhkan PIN lama untuk mengganti dengan PIN baru",
+  "appLockPinChanged": "PIN berhasil diubah",
+  "appLockPinStatus": "Status PIN",
+  "appLockPinSetDate": "Terakhir diatur: {date}",
+  "@appLockPinSetDate": {
+    "placeholders": {
+      "date": { "type": "String" }
+    }
+  },
+  "appLockPinSetUnknown": "Tanggal tidak diketahui",
+  "appLockSessionGraceTitle": "Toleransi Sesi PIN",
+  "appLockSessionGraceHint": "Set ke 0 untuk meminta PIN pada setiap aksi sensitif",
+  "appLockGraceSingleAction": "Setiap Aksi (Satu Per Satu)",
+  "appLockSessionGraceChanged": "Toleransi sesi diperbarui",
+  "appLockLockoutPolicyTitle": "Kebijakan Pemblokiran",
+  "appLockLockoutPolicyHint": "Memblokir sementara jika salah memasukkan PIN berkali-kali",
+  "appLockMaxFailedAttempts": "Maksimal percobaan salah",
+  "appLockMaxFailedAttemptsValue": "Kunci setelah {n} kali percobaan salah",
+  "@appLockMaxFailedAttemptsValue": {
+    "placeholders": {
+      "n": { "type": "int" }
+    }
+  },
+  "appLockBaseLockout": "Durasi pemblokiran dasar",
+  "appLockBaseLockoutValue": "Dimulai dari {duration}",
+  "@appLockBaseLockoutValue": {
+    "placeholders": {
+      "duration": { "type": "String" }
+    }
+  },
+  "appLockLockoutPolicyChanged": "Kebijakan pemblokiran diperbarui",
+  "appLockErasePin": "Hapus PIN",
+  "appLockErasePinTitle": "Hapus PIN tersimpan?",
+  "appLockErasePinConfirm": "Ini akan menghapus PIN Toko secara permanen.",
+  "appLockErasePinHint": "Hapus PIN tersimpan secara permanen",
+  "appLockPinErased": "PIN berhasil dihapus",
+  "appLockDisableConfirmTitle": "Nonaktifkan PIN Toko?",
+  "appLockDisableConfirmBody": "Tanpa PIN Toko, siapa pun yang memegang HP ini dapat membatalkan transaksi dan mengubah stok.",
+  "appLockConfirmDisable": "Nonaktifkan, Saya Mengerti",
+  "onboardingStorePinTitle": "Atur PIN Toko",
+  "onboardingStorePinBody": "Digunakan untuk mengamankan fitur sensitif toko (minimal {min} digit).",
+  "@onboardingStorePinBody": {
+    "placeholders": {
+      "min": { "type": "int" }
+    }
+  },
+  "onboardingSkipPin": "Lewati",
+  "onboardingSkipPinConfirmTitle": "Lewati pengaturan PIN?",
+  "onboardingSkipPinConfirmBody": "Kamu dapat mengaktifkan PIN Toko kapan saja melalui Pengaturan.",
+  "onboardingSetupPinInstead": "Atur PIN Sekarang",
+  "onboardingConfirmSkipPin": "Lewati, Saya Mengerti",
+  "onboardingPinSkippedHint": "PIN belum diatur — aktifkan kapan saja di Pengaturan.",
+  "exportPdf": "Ekspor PDF",
+  "exportCsv": "Ekspor CSV",
+  "exportReport": "Ekspor Laporan",
+  "exportNoData": "Tidak ada data untuk diekspor",
+  "exportFailed": "Gagal mengimpor/mengekspor data",
+  "revenueTrend": "Tren Penjualan",
+  "dailyRevenue": "Pendapatan Harian",
+  "periodComparison": "vs Periode Sebelumnya",
+  "periodChangePositive": "+{percent}%",
+  "@periodChangePositive": {
+    "placeholders": {
+      "percent": { "type": "String" }
+    }
+  },
+  "periodChangeNegative": "{percent}%",
+  "@periodChangeNegative": {
+    "placeholders": {
+      "percent": { "type": "String" }
+    }
+  },
+  "periodChangeZero": "Tidak ada perubahan",
+  "previousPeriod": "Periode sebelumnya",
+  "chartNoData": "Tidak ada data untuk grafik",
+  "dateRangeSeparator": " – ",
+  "percentagePointsUnit": "persen",
+  "reportSectionLabel": "Bagian laporan",
+  "recoveryKitSectionTitle": "Kunci Pemulihan (Recovery Kit)",
+  "recoveryKitSectionDesc": "Simpan file .promkey dan kode rahasia ini di tempat yang aman.",
+  "recoveryKitExportAction": "Ekspor Kunci Pemulihan",
+  "recoveryKitImportAction": "Impor Kunci Pemulihan",
+  "recoveryKitShareSubject": "Kunci Pemulihan Promsell POS",
+  "recoveryKitExportSecretTitle": "Buat Kode Rahasia Pemulihan",
+  "recoveryKitImportSecretTitle": "Masukkan Kode Rahasia Pemulihan",
+  "recoveryKitSecretLabel": "Kode Rahasia Pemulihan",
+  "recoveryKitSecretHelper": "Minimal 8 karakter.",
+  "recoveryKitSecretRequired": "Masukkan kode rahasia pemulihan",
+  "recoveryKitSecretTooShort": "Kode rahasia minimal 8 karakter",
+  "recoveryKitExportConfirmTitle": "Amankan File Pemulihan Ini",
+  "recoveryKitExportConfirmMessage": "Simpan file .promkey dan kode rahasia di tempat aman terpisah.",
+  "recoveryKitExportSuccess": "Kunci pemulihan berhasil diekspor.",
+  "recoveryKitImportReplaceTitle": "Kunci pemulihan sudah ada di HP ini",
+  "recoveryKitImportReplaceMessage": "Mengimpor akan menggantikan kunci saat ini. Lanjutkan?",
+  "recoveryKitImportSuccess": "Kunci pemulihan berhasil diimpor.",
+  "recoveryKitErrorWrongSecret": "Kode rahasia pemulihan salah",
+  "recoveryKitErrorCorrupt": "File kunci pemulihan tidak valid",
+  "recoveryKitErrorVersionUnsupported": "Versi pemulihan tidak didukung.",
+  "recoveryKitErrorFileNotFound": "File pemulihan tidak ditemukan",
+  "recoveryKitErrorNoKey": "Tidak ada kunci enkripsi yang ditemukan",
+  "recoveryKitErrorKeyUnavailable": "Kunci enkripsi di HP ini tidak dapat diakses.",
+  "dbRecoveryTitle": "Gagal Membuka Database",
+  "dbRecoveryMessage": "Database tidak dapat dibuka. Impor file pemulihan (.promkey) kamu.",
+  "dbRecoveryRetry": "Coba Lagi"
 }

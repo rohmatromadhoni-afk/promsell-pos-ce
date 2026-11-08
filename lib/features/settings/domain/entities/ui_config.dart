@@ -2,7 +2,7 @@ import 'package:equatable/equatable.dart';
 
 class UiConfig extends Equatable {
   const UiConfig({
-    this.locale = 'id',
+    this.locale = 'en',
     this.themeMode = 'system',
     this.dateFormat = 'dd/MM/yyyy',
     this.ultraCompactMode = false,

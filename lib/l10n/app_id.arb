@@ -409,3 +409,396 @@
       }
     }
   },
+  "productHistoryViewAll": "Lihat riwayat lengkap",
+  "productFormSectionBasicInfo": "Info dasar",
+  "tabInfo": "Info",
+  "tabPrice": "Harga",
+  "tabStock": "Stok",
+  "tabCodes": "Kode SKU/Barcode",
+  "productFormSectionDetails": "Detail",
+  "productFormImageUrlLabel": "URL Gambar (opsional)",
+  "trackStock": "Lacak Stok",
+  "trackStockHint": "Matikan untuk item jasa/layanan (tanpa pengurangan stok)",
+  "trackStockDisableConfirm": "Menonaktifkan pelacakan stok akan membekukan nilai stok saat ini. Kamu bisa mengaktifkannya kembali nanti.",
+  "stockTrackingDisabled": "Pelacakan stok dinonaktifkan. Aktifkan untuk mengelola jumlah stok.",
+  "stockNotTracked": "Stok tidak dilacak",
+  "settingsStockPolicy": "Kebijakan Stok",
+  "allowOversell": "Izinkan stok minus (oversell)",
+  "allowOversellHint": "Izinkan menambah item melebihi stok yang tersedia",
+  "stockBlocked": "Stok Diblokir",
+  "lowStockThreshold": "Peringatan stok menipis (jumlah)",
+  "lowStockWarning": "Stok menipis",
+  "inStock": "Stok tersedia",
+  "codesCardTitle": "SKU & Barcode",
+  "discountSectionLabel": "Diskon",
+  "discountDialogTitle": "Terapkan Diskon",
+  "discountTypePercent": "Persen (%)",
+  "discountTypeAmount": "Nominal (Rp)",
+  "discountPreview": "Setelah diskon: {amount}",
+  "@discountPreview": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "discountApply": "Terapkan",
+  "discountClear": "Hapus diskon",
+  "cartDiscount": "Diskon keranjang",
+  "applyCartDiscount": "Terapkan diskon keranjang",
+  "discountLabel": "-{amount}",
+  "@discountLabel": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "discountValueRequired": "Masukkan nilai diskon",
+  "discountValueInvalid": "Nilai diskon tidak valid",
+  "preTaxTotal": "Total sebelum pajak",
+  "settingsDiscountPolicy": "Kebijakan Diskon",
+  "enableItemDiscount": "Aktifkan diskon per item",
+  "enableCartDiscount": "Aktifkan diskon keranjang",
+  "maxDiscountPercent": "Diskon maksimal (%)",
+  "maxDiscountAmount": "Diskon maksimal (nominal)",
+  "maxAmountNoLimit": "Tanpa batas",
+  "defaultDiscountType": "Tipe diskon default",
+  "presetDiscountValues": "Preset diskon (dipisahkan koma)",
+  "discountPresetsTitle": "Preset Diskon",
+  "discountPresetName": "Nama preset",
+  "discountPresetType": "Tipe",
+  "discountPresetValues": "Nilai",
+  "addDiscountPreset": "Tambah preset",
+  "deleteDiscountPreset": "Hapus preset",
+  "activeDiscountPreset": "Preset aktif",
+  "editDiscountPreset": "Edit Preset",
+  "noDiscountPresets": "Belum ada preset diskon",
+  "addPresetValue": "Tambah nilai",
+  "receiptItemDiscounts": "Diskon Item",
+  "receiptCartDiscount": "Diskon Keranjang",
+  "draftsTitle": "Tagihan Tertunda",
+  "newDraft": "Tagihan Baru",
+  "renameDraft": "Ganti Nama",
+  "deleteDraft": "Hapus Tagihan",
+  "deleteDraftConfirm": "Hapus tagihan ini?",
+  "draftLimitReached": "Batas maksimal 10 tagihan tercapai. Hapus tagihan lama terlebih dahulu.",
+  "activeDraftLabel": "Aktif",
+  "openBillsSectionSelling": "Sedang Dilayani",
+  "openBillsSectionParked": "Disimpan (Parkir)",
+  "draftNameHint": "Nama tagihan / pemesan (opsional)",
+  "switchDraft": "Beralih ke tagihan ini",
+  "cartCleared": "Keranjang dikosongkan",
+  "removeItem": "Hapus item",
+  "itemsLabel": "item",
+  "searchCartItems": "Cari item...",
+  "searchDrafts": "Cari tagihan...",
+  "untitledDraft": "Tagihan Tanpa Nama",
+  "noMatchingItems": "Tidak ada item yang cocok",
+  "noMatchingDrafts": "Tidak ada tagihan yang cocok",
+  "noSavedBills": "Belum ada tagihan tertunda",
+  "noSavedBillsHint": "Simpan tagihan dari layar kasir untuk membukanya di sini",
+  "groupView": "Tampilan Grup",
+  "listView": "Tampilan Daftar",
+  "gridView": "Tampilan Kisi",
+  "cartSizeMini": "Mini",
+  "cartSizeHalf": "Separuh",
+  "cartSizeFull": "Penuh",
+  "cartCompactNormal": "Kepadatan Normal",
+  "cartCompactCompact": "Kepadatan Rapat",
+  "cartCompactUltra": "Kepadatan Sangat Rapat",
+  "atStockLimit": "Batas stok tercapai",
+  "justNow": "Baru saja",
+  "timeAgoMinutes": "{m} mnt lalu",
+  "@timeAgoMinutes": {
+    "placeholders": {
+      "m": {
+        "type": "int"
+      }
+    }
+  },
+  "timeAgoHours": "{h} jam lalu",
+  "@timeAgoHours": {
+    "placeholders": {
+      "h": {
+        "type": "int"
+      }
+    }
+  },
+  "timeAgoDays": "{d} hr lalu",
+  "@timeAgoDays": {
+    "placeholders": {
+      "d": {
+        "type": "int"
+      }
+    }
+  },
+  "searchResultsCount": "{n} hasil",
+  "@searchResultsCount": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "confirmPaymentAmount": "Konfirmasi {currency}{amount}",
+  "@confirmPaymentAmount": {
+    "placeholders": {
+      "currency": {
+        "type": "String"
+      },
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "discountPreviewPercent": "Setelah diskon: {value}%",
+  "@discountPreviewPercent": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "pickImageGallery": "Pilih dari Galeri",
+  "pickImageCamera": "Ambil Foto",
+  "removeImage": "Hapus Gambar",
+  "imagePickError": "Gagal mengambil gambar",
+  "promptpay": "QRIS / Transfer",
+  "settingsPromptpayId": "ID QRIS / No. Rekening",
+  "settingsPromptpayIdHint": "Nomor HP, NIK, atau No. Rekening",
+  "promptpayQrTitle": "Pindai untuk Bayar",
+  "promptpayConfirmPayment": "Konfirmasi Pembayaran Diterima",
+  "promptpayNotConfigured": "QRIS / Transfer belum diatur",
+  "promptpaySettingsHint": "Buka Pengaturan",
+  "promptpayAccount": "Akun",
+  "promptpayScanToPay": "Scan QR untuk Bayar",
+  "promptpayQrPreview": "Pratinjau QR Pembayaran",
+  "promptpayInfoDescription": "Masukkan ID QRIS atau Nomor Rekening Bank kamu untuk menerima pembayaran QR.",
+  "promptpayInvalidId": "Masukkan nomor HP atau ID rekening yang valid",
+  "promptpayWaitingForPayment": "Menunggu pembayaran pelanggan...",
+  "promptpayPaymentTimeout": "Waktu pembayaran habis. Transaksi dibatalkan.",
+  "promptpayExtendTime": "Tambah +1 mnt",
+  "promptpayCancelPayment": "Batalkan Pembayaran",
+  "promptpayTransactionReference": "Referensi Transaksi (opsional)",
+  "promptpayQrSaved": "QR disimpan ke galeri",
+  "promptpayQrShared": "QR dibagikan",
+  "promptpaySaveQr": "Simpan QR",
+  "promptpayShareQr": "Bagikan QR",
+  "promptpaySoundEnabled": "Suara konfirmasi aktif",
+  "promptpayTimeoutSetting": "Tenggat waktu pembayaran (menit)",
+  "minutes": "menit",
+  "slipScanTitle": "Pindai Bukti Transfer",
+  "slipScanHint": "Arahkan QR bukti transfer ke dalam bingkai",
+  "slipScanSuccess": "Bukti transfer terverifikasi",
+  "slipScanInvalid": "QR bukti transfer tidak valid",
+  "slipErrorEmpty": "QR code kosong terdeteksi",
+  "slipErrorNotASlip": "Ini adalah QR pembayaran, bukan bukti transfer.",
+  "slipErrorUnreadable": "Gagal membaca QR bukti transfer. Silakan coba lagi.",
+  "promptpayInvalidQr": "Kode QR tidak valid",
+  "settingsBillerId": "ID Tagihan / Merchant",
+  "settingsBillerIdHint": "NPWP / ID Merchant untuk QR Pembayaran",
+  "settingsDefaultQrType": "Tipe QR Default",
+  "settingsDefaultQrTypeTransfer": "Transfer",
+  "settingsDefaultQrTypeBill": "Pembayaran Tagihan",
+  "settingsAutoConfirmAfterSlip": "Konfirmasi otomatis setelah scan bukti",
+  "settingsAutoConfirmAfterSlipHint": "Otomatis konfirmasi pembayaran 2 detik setelah bukti transfer diverifikasi",
+  "settingsQrOverlayIcon": "Ikon QR",
+  "cart": "Keranjang",
+  "moreItems": "item lainnya",
+  "total": "Total",
+  "waitingForPayment": "Menunggu pembayaran...",
+  "copyPromptpayId": "Tersalin ke papan klip",
+  "paymentVerified": "Pembayaran terverifikasi",
+  "showMore": "Tampilkan lebih banyak",
+  "showLess": "Tampilkan lebih sedikit",
+  "itemsCount": "{count} item",
+  "totalDiscountLabel": "Total diskon",
+  "@totalDiscountLabel": {},
+  "settingsReceiptSize": "Ukuran Kertas Struk",
+  "receiptSize58mm": "58mm (Thermal)",
+  "receiptSize80mm": "80mm (Thermal)",
+  "receiptSizeA4": "A4",
+  "receiptSize58mmDesc": "Ringkas — printer bluetooth portabel kecil",
+  "receiptSize80mmDesc": "Standar — sebagian besar printer thermal toko",
+  "receiptSizeA4Desc": "Dokumen — untuk cetak PDF / Email",
+  "settingsMaxDrafts": "Maksimal Tagihan Tertunda",
+  "settingsCompactCartMode": "Keranjang Gaya Aplikasi Kasir",
+  "settingsUltraCompactMode": "Mode Sangat Ringkas",
+  "settingsUltraCompactModeHint": "Item lebih kecil untuk kepadatan maksimal",
+  "settingsCompactModeSubtitle": "Bilah keranjang di bawah seperti aplikasi modern",
+  "settingsUltraModeOverrides": "Mengabaikan mode Ringkas",
+  "settingsUltraModeSubtitle": "Jarak minimal untuk jumlah barang maksimal",
+  "settingsOversellAllowed": "Izinkan stok minus",
+  "settingsImages": "Gambar",
+  "settingsImageMaxWidth": "Lebar Maksimal (px)",
+  "settingsImageQuality": "Kualitas (%)",
+  "imageWidthSmall": "Kecil",
+  "imageWidthMedium": "Sedang",
+  "imageWidthLarge": "Besar",
+  "imageWidthExtraLarge": "Sangat Besar",
+  "imageWidthFullHD": "Full HD",
+  "imageQualityDraft": "Buram/Cepat",
+  "imageQualityStandard": "Standar",
+  "imageQualityHigh": "Tinggi",
+  "imageQualityBest": "Terbaik",
+  "imageQualityOriginal": "Asli",
+  "imageExample": "Contoh",
+  "settingsBackup": "Cadangan (Backup)",
+  "settingsSetupReadiness": "Kesiapan Toko",
+  "settingsData": "Data",
+  "exportDatabase": "Ekspor Database (Backup Lengkap)",
+  "exportSalesCsv": "Ekspor Penjualan (CSV)",
+  "exportProductsCsv": "Ekspor Produk (CSV)",
+  "restoreFromBackup": "Pulihkan dari Cadangan...",
+  "restoreConfirmTitle": "Pulihkan Data Cadangan?",
+  "restoreConfirmMessage": "Data saat ini akan ditimpa. Lanjutkan?",
+  "restoreSuccess": "Data berhasil dipulihkan",
+  "restoreError": "Gagal memulihkan data",
+  "backupReminderTitle": "Pengingat Cadangan",
+  "backupReminderMessage": "Belum ada cadangan selama lebih dari {days} hari",
+  "@backupReminderMessage": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "settingsBackupReminderDays": "Pengingat cadangan (hari, 0=mati)",
+  "backupWeekly": "Mingguan",
+  "backupBiweekly": "Dua Mingguan",
+  "backupMonthly": "Bulanan",
+  "backupBimonthly": "Dua Bulanan",
+  "backupQuarterly": "Tiga Bulanan",
+  "backupLastBackup": "Cadangan terakhir",
+  "backupToday": "Hari ini",
+  "backupYesterday": "Kemarin",
+  "backupDaysAgo": "{days} hari lalu",
+  "@backupDaysAgo": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "backupStatusSafe": "Terbaru",
+  "backupStatusWarning": "Segera cadangkan",
+  "backupStatusOverdue": "Terlewat",
+  "backupNow": "Cadangkan Sekarang",
+  "backupSuccess": "Cadangan selesai",
+  "backupReminderLabel": "Pengingat cadangan",
+  "backupFrequency": "Frekuensi",
+  "backupEveryNDays": "Setiap {n} hari",
+  "@backupEveryNDays": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "backupOff": "Mati",
+  "backupActionTitle": "Cadangkan manual",
+  "backupActionSubtitle": "Ketuk untuk mencatat bahwa kamu telah mencadangkan data",
+  "backupEncryptionTitle": "Enkripsi Cadangan",
+  "backupEncryptionLabel": "Enkripsi file cadangan",
+  "backupEncryptionDesc": "Lindungi file cadangan dengan enkripsi AES-256-GCM (butuh PIN)",
+  "backupInfoDescription": "Ekspor cadangan secara berkala. Pemulihan dalam aplikasi hanya berlaku untuk perangkat yang sama.",
+  "exportSuccess": "Ekspor berhasil",
+  "bulkSelected": "{count} dipilih",
+  "@bulkSelected": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "bulkClearDiscount": "Hapus Diskon",
+  "bulkDelete": "Hapus",
+  "reorderItem": "Geser untuk urutkan ulang",
+  "dailyCloseTitle": "Tutup Harian",
+  "dailyCloseHistoryTitle": "Riwayat Tutup Harian",
+  "closeToday": "Tutup Hari Ini",
+  "closeDay": "Tutup Hari",
+  "reopenDay": "Buka Kembali Hari",
+  "closeDayConfirmTitle": "Tutup Hari?",
+  "closeDayConfirmMessage": "Ini akan mengunci transaksi hari ini dan menyimpan rekapitulasi.",
+  "reopenDayConfirmTitle": "Buka Kembali Hari?",
+  "reopenDayConfirmMessage": "Ini akan membuka kunci transaksi hari ini.",
+  "confirm": "Konfirmasi",
+  "basePrice": "Harga dasar",
+  "optionsLabel": "Opsi",
+  "dbHealthTitle": "Kesehatan Database",
+  "dbHealthFileSize": "Ukuran file database",
+  "dbHealthLarge": "BESAR",
+  "dbHealthOk": "OK",
+  "dbHealthLow": "RENDAH",
+  "dbHealthFreeStorage": "Penyimpanan tersisa",
+  "dbHealthUnknown": "Tidak diketahui",
+  "dbHealthMigrationStatus": "Status migrasi terakhir",
+  "dbHealthMigrationNone": "Tidak ada catatan",
+  "dbHealthMigrationRunning": "Sedang berjalan",
+  "dbHealthMigrationSucceeded": "Berhasil",
+  "dbHealthMigrationFailed": "Gagal",
+  "dbHealthLowStorageTitle": "Penyimpanan hampir penuh",
+  "dbHealthLowStorageMessage": "Tersisa {space}. Bebaskan ruang sebelum memperbarui database.",
+  "@dbHealthLowStorageMessage": {
+    "placeholders": {
+      "space": {
+        "type": "String"
+      }
+    }
+  },
+  "dbHealthLargeTitle": "Database besar",
+  "dbHealthLargeMessage": "Ukuran database kamu melebihi 50 MB.",
+  "dbHealthRowCounts": "Jumlah baris data",
+  "dbHealthVacuum": "Optimalkan Database (Vacuum)",
+  "dbHealthVacuumDescription": "Vacuum merapikan kembali file database untuk menghemat ruang.",
+  "onboardingShopInfoTitle": "Informasi Toko",
+  "onboardingShopInfoSubtitle": "Informasi ini akan muncul di struk belanja.",
+  "onboardingRequiredLabel": "Wajib",
+  "onboardingOptionalLabel": "Opsional",
+  "onboardingReceiptPreviewTitle": "Pratinjau Struk Toko",
+  "onboardingReceiptPreviewEmpty": "Nama tokomu akan muncul di sini",
+  "onboardingShopNameLabel": "Nama Toko",
+  "onboardingShopNameHint": "Toko Barokah",
+  "onboardingAddressLabel": "Alamat",
+  "onboardingAddressHint": "Jl. Raya Brangkal, Mojokerto",
+  "onboardingPhoneLabel": "No. Telepon",
+  "onboardingPhoneHint": "081234567890",
+  "onboardingPromptPayTitle": "Pembayaran QRIS",
+  "onboardingPromptPaySubtitle": "Masukkan ID QRIS/Rekening untuk menerima pembayaran QR.",
+  "onboardingPromptPayIdLabel": "ID QRIS / No. Rekening",
+  "onboardingPromptPayIdHint": "Nomor HP atau No. Rekening Bank",
+  "onboardingVatRateLabel": "Tarif PPN %",
+  "onboardingSkipSetup": "Lewati Pengaturan",
+  "onboardingWelcomeSubtitle": "Aplikasi kasir mobile offline-first kamu.\nMari atur tokomu dalam beberapa langkah mudah.",
+  "onboardingLocaleCurrencyTitle": "Bahasa & Mata Uang",
+  "onboardingAllSet": "Semua Siap!",
+  "onboardingReadyToSell": "Tokomu sudah dikonfigurasi dan siap untuk melayani transaksi.",
+  "onboardingShopInfo": "Info Toko",
+  "onboardingLocaleCurrency": "Bahasa & Mata Uang",
+  "onboardingTaxSetup": "Pengaturan Pajak",
+  "onboardingDone": "Selesai",
+  "onboardingBack": "Kembali",
+  "onboardingNext": "Lanjut",
+  "onboardingStartSelling": "Mulai Berjualan",
+  "onboardingLanguage": "Bahasa",
+  "onboardingThai": "Thailand",
+  "onboardingEnglish": "Inggris",
+  "onboardingCurrency": "Mata Uang",
+  "onboardingDateFormat": "Format Tanggal",
+  "onboardingVatMode": "Mode PPN (opsional)",
+  "onboardingNone": "Tanpa PPN",
+  "onboardingInclusive": "Termasuk PPN",
+  "onboardingExclusive": "Belum Termasuk PPN",
+  "onboardingTrustOffline": "Bekerja secara offline",
+  "onboardingTrustLocal": "Data tersimpan di HP ini",
+  "onboardingTrustEncrypted": "Penyimpanan terenkripsi",
+  "onboardingStepOf": "Langkah {step} dari {total}",
+  "@onboardingStepOf": {
+    "placeholders": {
+      "step": {"type": "int"},
+      "total": {"type": "int"}
+    }
+  }
+}

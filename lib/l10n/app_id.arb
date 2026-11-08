@@ -1,135 +1,217 @@
 {
   "@@locale": "id",
-  "salePageTitle": "Penjualan",
-  "salePageSubtitle": "Tambah produk dan selesaikan penjualan",
-  "saleBillNoteTitle": "Catatan nota",
-  "dragToResizeCart": "Geser untuk mengubah ukuran keranjang",
-  "exitCompactMode": "Keluar dari Mode Ringkas",
-  "exitCompactModeConfirm": "Pindah ke tampilan keranjang biasa?",
-  "autoConfirmingIn": "Konfirmasi otomatis dalam {secs}...",
+  "appTitle": "Promsell POS",
+  "appTagline": "Kasir Pintar",
+  "loading": "Memuat...",
+  "navHome": "Beranda",
+  "navSale": "Kasir",
+  "navProducts": "Produk",
+  "navHistory": "Riwayat Penjualan",
+  "navReport": "Ringkasan",
+  "navSettings": "Pengaturan",
+  "salePageTitle": "Kasir",
+  "salePageSubtitle": "Tambah produk dan selesaikan transaksi",
+  "saleBillNoteTitle": "Catatan Struk",
+  "dragToResizeCart": "Geser untuk ubah ukuran keranjang",
+  "exitCompactMode": "Keluar Ringkasan Tampilan",
+  "exitCompactModeConfirm": "Ubah ke tampilan keranjang normal?",
+  "autoConfirmingIn": "Konfirmasi otomatis dalam {secs} dtk...",
+  "@autoConfirmingIn": {
+    "placeholders": {
+      "secs": {
+        "type": "int"
+      }
+    }
+  },
   "clearCart": "Kosongkan",
   "confirmClearCart": "Kosongkan seluruh keranjang?",
-  "cartTitle": "Nota",
+  "cartTitle": "Tagihan",
   "cartEmpty": "Keranjang kosong",
-  "backToSale": "Kembali ke Penjualan",
+  "backToSale": "Kembali ke Kasir",
   "checkoutButton": "Bayar",
-  "addItems": "Tambah Item",
+  "addItems": "Tambah Barang",
   "itemRemoved": "{name} dihapus",
-  "undo": "Batalkan",
+  "@itemRemoved": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "undo": "Batal",
   "allCategories": "Semua",
-  "saleSearchProducts": "Cari produk penjualan...",
+  "saleSearchProducts": "Cari produk...",
   "quickCashExact": "Uang pas",
   "noProducts": "Tidak ada produk",
-  "saleSavedSuccess": "Penjualan berhasil disimpan",
-  "saleSuccessTitle": "Pembayaran selesai",
+  "saleSavedSuccess": "Transaksi berhasil disimpan",
+  "saleSuccessTitle": "Pembayaran Selesai",
   "saleSuccessSubtitle": "Struk #{number}",
+  "@saleSuccessSubtitle": {
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
   "changeDue": "Kembalian",
-  "nextSale": "Penjualan berikutnya",
+  "nextSale": "Transaksi baru",
   "productAddedToCart": "{name} ditambahkan",
-  "tapProductToAdd": "Ketuk produk untuk menambahkan ke nota ini",
+  "@productAddedToCart": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "tapProductToAdd": "Ketuk produk untuk menambahkan ke tagihan",
   "noMatchingProducts": "Produk tidak ditemukan",
-  "stockLimitReached": "Stok habis",
+  "stockLimitReached": "Batas stok tercapai",
   "cartTotal": "Total",
   "checkout": "Bayar ({count})",
+  "@checkout": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "paymentTitle": "Pembayaran",
-  "totalAmount": "Jumlah yang harus dibayar",
+  "totalAmount": "Total Tagihan",
   "cash": "Tunai",
   "transfer": "Transfer",
   "card": "Kartu",
-  "receivedAmount": "Uang diterima ({currency})",
-  "change": "Kembali",
+  "receivedAmount": "Jumlah Diterima ({currency})",
+  "@receivedAmount": {
+    "placeholders": {
+      "currency": {
+        "type": "String"
+      }
+    }
+  },
+  "change": "Kembalian",
   "confirmPayment": "Konfirmasi Pembayaran",
-  "confirmPaymentAmount": "Konfirmasi {currency}{amount}",
   "notePlaceholder": "Catatan (opsional)",
-  "saleError": "Gagal menyimpan penjualan",
-  "saleTimeout": "Pembayaran habis waktu, silakan coba lagi",
+  "paymentReferenceOptional": "Referensi pembayaran (opsional)",
+  "saleError": "Gagal menyimpan transaksi",
+  "saleTimeout": "Pembayaran tenggat waktu, silakan coba lagi",
   "insufficientCash": "Uang yang diterima kurang",
   "remainingAmount": "Sisa",
   "productsTitle": "Produk",
-  "searchProducts": "Cari produk, barcode, dan lainnya...",
+  "searchProducts": "Cari produk, barcode, dll...",
+  "searchProductsHint": "Ketuk untuk cari produk, barcode, dll...",
+  "tapToSearch": "Ketuk untuk mencari",
+  "searchActive": "Pencarian aktif",
+  "recentSearches": "Pencarian terakhir",
   "noProductsYet": "Belum ada produk",
-  "noProductsYetHint": "Tambahkan produk pertama atau impor dari CSV untuk memulai.",
+  "noProductsYetHint": "Tambahkan produk pertama kamu atau impor dari file CSV.",
   "errorOccurred": "Terjadi kesalahan",
-  "receiptPrintFailed": "Gagal mencetak. Periksa printer lalu coba lagi.",
+  "receiptPrintFailed": "Gagal mencetak. Silakan cek printer dan coba lagi.",
+  "receiptShareFailed": "Gagal membagikan struk. Silakan coba lagi.",
+  "receiptPdfFailed": "Gagal membuat PDF struk.",
   "receiptPrintSuccess": "Struk berhasil dicetak.",
   "receiptShareSuccess": "Struk berhasil dibagikan.",
+  "receiptTaxInvoice": "Faktur / Struk",
   "retry": "Coba lagi",
   "noCategory": "Tanpa kategori",
   "stockLabel": "Stok: {count}",
-  "printReceipt": "Cetak Struk",
-  "shareReceipt": "Bagikan Struk",
-  "reprintReceipt": "Cetak Ulang Struk",
-  "receiptLabelReceipt": "Struk",
-  "receiptLabelPayment": "Pembayaran",
-  "receiptLabelTotal": "Total",
-  "receiptLabelReceived": "Diterima",
-  "receiptLabelChange": "Kembali",
-  "receiptLabelNote": "Catatan",
-  "receiptLabelSubtotal": "Subtotal",
-  "cancel": "Batal",
-  "save": "Simpan",
+  "@stockLabel": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "stockRemaining": "Sisa: {count}",
+  "@stockRemaining": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "itemNoteLabel": "Catatan item",
+  "itemNoteHint": "Tambah catatan untuk item ini",
+  "duplicateItem": "Item diduplikasi",
+  "duplicateItemAction": "Duplikasi",
+  "clear": "Bersihkan",
+  "edit": "Edit",
   "delete": "Hapus",
-  "edit": "Ubah",
-  "confirm": "Konfirmasi",
-  "done": "Selesai",
-  "clear": "Hapus isi",
-   "homeGreeting": "Halo, {shopName}",
-  "homeSubtitle": "Ayo jadikan hari ini hari penjualan yang bagus!",
-  "homeTodayRevenue": "Pendapatan hari ini",
-  "homeVsYesterday": "dibanding kemarin",
-  "homeRevenue": "Pendapatan",
-  "homeCost": "Modal",
-  "homeProfit": "Laba",
-  "homeMainMenu": "Menu Utama",
-  "homeHistory": "Riwayat",
-  "homeCloseDay": "Tutup Hari",
-  "homeLoadError": "Gagal memuat data",
-  "todayRevenue": "Pendapatan hari ini",
-  "todaySalesCount": "Penjualan",
-  "totalProducts": "Total produk",
-  "cartBillDetails": "Detail nota",
-  "cartHoldBill": "Nota tersimpan",
-  "cartItemCount": "{count} item",
-  "cartActiveBill": "Nota: {name}",
-  "holdCurrentBill": "Simpan nota ini",
-  "newBill": "Nota baru",
-  "billHeld": "Nota disimpan",
-  "newBillConfirm": "Simpan nota sekarang dan mulai nota kosong baru?",
-  "newBillStarted": "Nota baru dimulai",
-  "parkBill": "Simpan nota",
-  "parkAndNext": "Simpan & berikutnya",
-  "openBillsCount": "Nota terbuka ({count})",
-  "amountDue": "Jumlah yang harus dibayar",
-  "payAmount": "Bayar {amount}",
-  "splitTenderTitle": "Pembayaran campuran (tunai + lainnya)",
-  "paymentMixed": "Pembayaran campuran",
-  "promptPayShareTitle": "Bagian PromptPay",
-  "filterAll": "Semua",
-  "filterCategory": "Kategori",
-  "filterReset": "Hapus",
-  "filterShowResults": "Tampilkan Hasil",
-  "sortDefault": "Default",
-  "sortNameAsc": "Nama A-Z",
-  "sortPriceLowHigh": "Harga: Rendah ke Tinggi",
-  "sortPriceHighLow": "Harga: Tinggi ke Rendah",
-  "sortStockLowHigh": "Stok: Rendah ke Tinggi",
-  "importProducts": "Impor Produk",
-  "importSuccess": "{count} produk berhasil diimpor",
-  "csvImportError": "Gagal membaca file CSV",
-  "csvNoData": "Tidak ada data di file CSV",
-  "barcodeNotFound": "Tidak ada produk dengan barcode ini",
-  "scanBarcode": "Scan Barcode",
-  "enterBarcodeManually": "Masukkan barcode manual",
-  "insufficientStock": "Stok tidak cukup",
-  "productNotFound": "Produk tidak ditemukan",
-  "outOfStock": "Stok habis",
-  "lowStock": "Stok menipis",
-  "inStock": "Tersedia",
-  "exportCsv": "Ekspor CSV",
-  "exportPdf": "Ekspor PDF",
-  "backupNow": "Backup Sekarang",
-  "backupSuccess": "Backup selesai",
-  "receiptThankYouDefault": "Terima kasih!",
-  "receiptNotTaxInvoice": "Struk penjualan, bukan faktur pajak",
-  "receiptTaxId": "NPWP"
-}
+  "activate": "Aktifkan",
+  "deactivate": "Nonaktifkan",
+  "deleteProduct": "Hapus Produk",
+  "confirmDeleteProduct": "Yakin hapus \"{name}\"?",
+  "@confirmDeleteProduct": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "productDeactivateConfirm": "Nonaktifkan \"{name}\"? Produk ini akan disembunyikan dari layar kasir.",
+  "@productDeactivateConfirm": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "productActivateConfirm": "Aktifkan \"{name}\"? Produk ini akan tampil di layar kasir.",
+  "@productActivateConfirm": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "cancel": "Batal",
+  "addProduct": "Tambah Produk",
+  "editProductTitle": "Edit Produk",
+  "productNameLabel": "Nama produk *",
+  "productNameHint": "Contoh: Es Teh Manis Jumbo",
+  "productNameRequired": "Masukkan nama produk",
+  "productNameTooLong": "Nama produk terlalu panjang (maksimal 100 karakter)",
+  "quickEditStockSet": "Atur",
+  "quickEditStockAdjust": "Sesuaikan",
+  "quickEditNameHint": "Masukkan nama produk baru",
+  "quickEditPriceHint": "Masukkan harga jual baru",
+  "quickEditStockSetHint": "Ketuk + / - atau angka untuk edit. Tekan lama tombol untuk ubah cepat.",
+  "quickEditStockAdjustHint": "Masukkan jumlah untuk menambah atau mengurangi stok saat ini",
+  "stockStepperLongPressHint": "Tekan lama untuk menyesuaikan terus-menerus",
+  "stockStepperTapNumberHint": "Ketuk angka untuk mengetik langsung",
+  "quickEditNameSaved": "Nama diperbarui",
+  "quickEditNameCancelled": "Nama tidak diubah",
+  "quickEditNameInvalid": "Nama tidak valid",
+  "quickEditPriceSaved": "Harga diperbarui",
+  "quickEditPriceCancelled": "Harga tidak diubah",
+  "quickEditPriceInvalid": "Harga tidak valid",
+  "priceLabel": "Harga ({currency}) *",
+  "@priceLabel": {
+    "placeholders": {
+      "currency": {
+        "type": "String"
+      }
+    }
+  },
+  "priceRequired": "Masukkan harga",
+  "invalidPrice": "Harga tidak valid",
+  "priceMustBePositive": "Harga harus lebih dari 0",
+  "quantityLabel": "Jumlah",
+  "quantityRequired": "Masukkan jumlah",
+  "invalidQuantity": "Jumlah tidak valid",
+  "invalidBarcode": "Barcode harus berupa kombinasi huruf dan angka",
+  "invalidBarcodeFormat": "Barcode hanya boleh berisi huruf dan angka (tanpa spasi atau karakter khusus)",
+  "categoryLabel": "Kategori",
+  "categoryHelper": "Opsional — membantu mengelompokkan produk di kasir",
+  "showProduct": "Tampilkan produk",
+  "productVisibility": "Visibilitas produk",
+  "save": "Simpan",
+  "productSaved": "Produk disimpan",
+  "productActivated": "Produk diaktifkan",
+  "productDeactivated": "Produk dinonaktifkan",
+  "productDeleted": "Produk dihapus",
+  "productDeletedWithName": "{name} dihapus",
+  "@productDeletedWithName": {
+    "placeholders": {
+      "name": { "type": "String" }
+    }
+  },

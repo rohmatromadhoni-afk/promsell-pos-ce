@@ -38,7 +38,7 @@ class SalesPreferencesSection extends StatelessWidget {
                 context: context,
                 icon: Icons.attach_money_outlined,
                 label: l10n.settingsCurrency,
-                options: const ['฿', '\$', '€', '¥'],
+                options: const ['Rp'],
                 selected: settings.currency,
                 onSelected: (v) => onUpdate(settings.copyWith(currency: v)),
               ),

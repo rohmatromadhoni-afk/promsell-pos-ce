@@ -1778,7 +1778,7 @@
   "searchMatchName": "Nama",
   "searchMatchSku": "SKU",
   "searchMatchBarcode": "Barcode",
-    "searchResultsCount": "{count} hasil ditemukan",
+  "searchResultsCount": "{count} hasil ditemukan",
   "@searchResultsCount": {
     "placeholders": {
       "count": {

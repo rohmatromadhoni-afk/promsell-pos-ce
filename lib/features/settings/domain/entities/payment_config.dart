@@ -2,7 +2,7 @@ import 'package:equatable/equatable.dart';
 
 class PaymentConfig extends Equatable {
   const PaymentConfig({
-    this.currency = '฿',
+    this.currency = 'Rp',
     this.promptpayId = '',
     this.billerId = '',
     this.promptPayTimeout = 180,

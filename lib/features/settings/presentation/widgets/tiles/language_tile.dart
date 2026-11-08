@@ -24,6 +24,7 @@ class LanguageTile extends StatelessWidget {
         dropdownColor: Theme.of(context).colorScheme.surfaceContainerHigh,
         iconEnabledColor: Theme.of(context).colorScheme.onSurfaceVariant,
         items: [
+          DropdownMenuItem(value: 'id', child: Text('Bahasa Indonesia')),
           DropdownMenuItem(value: 'th', child: Text(l10n.langThai)),
           DropdownMenuItem(value: 'en', child: Text(l10n.langEnglish)),
         ],

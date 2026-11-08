@@ -8,7 +8,11 @@ class CurrencyTile extends StatelessWidget {
     required this.current,
     required this.onChanged,
   });
+  
+  // ignore: unused_field
   final String current;
+  
+  // ignore: unused_field
   final ValueChanged<String> onChanged;
 
   @override

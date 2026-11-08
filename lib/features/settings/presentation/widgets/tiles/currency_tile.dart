@@ -2,17 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:promsell_pos_ce/core/extensions/l10n_extension.dart';
 import 'package:promsell_pos_ce/features/settings/presentation/widgets/shared/responsive_settings_picker.dart';
 
+// ignore: must_be_immutable
 class CurrencyTile extends StatelessWidget {
   const CurrencyTile({
     super.key,
     required this.current,
     required this.onChanged,
   });
-  
-  // ignore: unused_field
+
   final String current;
-  
-  // ignore: unused_field
   final ValueChanged<String> onChanged;
 
   @override

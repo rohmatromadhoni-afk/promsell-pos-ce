@@ -215,3 +215,197 @@
       "name": { "type": "String" }
     }
   },
+  "productDeletedShort": "Produk dihapus",
+  "stockUpdated": "Stok diperbarui",
+  "stockUpdateCancelled": "Stok tidak diubah",
+  "stockUpdateInvalid": "Jumlah stok tidak valid",
+  "stockUpdateError": "Gagal memperbarui stok",
+  "productUpdateError": "Gagal memperbarui produk",
+  "productAddError": "Gagal menambahkan produk",
+  "productDeleteError": "Gagal menghapus produk",
+  "stockZeroWarning": "Produk tidak akan muncul di kasir saat stok 0",
+  "historyTitle": "Riwayat Penjualan",
+  "searchHistoryHint": "Cari nomor struk, pembayaran, total...",
+  "searchSales": "Cari penjualan",
+  "noSearchResults": "Penjualan tidak ditemukan",
+  "noSalesYet": "Belum ada transaksi",
+  "noSalesInRange": "Tidak ada penjualan pada rentang tanggal ini",
+  "changeDateRange": "Ubah rentang tanggal",
+  "searchResultsCount": "{count} hasil ditemukan",
+  "noResultsInDateRange": "Tidak ada hasil di rentang tanggal ini. Coba ubah rentang tanggal.",
+  "searchingInRange": "Mencari dalam rentang: {range}",
+  "tapToExpandHint": "Ketuk untuk lihat detail",
+  "noDailyClosesYet": "Belum ada tutup harian",
+  "noteLabel": "Catatan: {note}",
+  "@noteLabel": {
+    "placeholders": {
+      "note": {
+        "type": "String"
+      }
+    }
+  },
+  "reportTitle": "Ringkasan Penjualan",
+  "totalRevenue": "Total Pendapatan",
+  "salesCount": "{count} transaksi",
+  "@salesCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "byPaymentMethod": "Berdasarkan Metode Pembayaran",
+  "topProducts": "Terlaris (Top 5)",
+  "units": "{count} unit",
+  "@units": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "settingsTitle": "Pengaturan",
+  "searchSettings": "Cari pengaturan...",
+  "pressBackAgainToExit": "Tekan kembali sekali lagi untuk keluar",
+  "settingsGeneral": "Umum",
+  "settingsStoreBusiness": "Toko & Usaha",
+  "settingsPayments": "Pembayaran",
+  "settingsSystemData": "Sistem & Data",
+  "settingsStatusComplete": "Lengkap",
+  "settingsStatusIncomplete": "Belum Lengkap",
+  "settingsStatusActive": "Aktif",
+  "settingsStatusNotSet": "Belum Diatur",
+  "settingsLanguage": "Bahasa",
+  "settingsTheme": "Tema",
+  "settingsThemeLight": "Cerah",
+  "settingsThemeDark": "Gelap",
+  "settingsThemeSystem": "Ikuti Sistem",
+  "settingsAccessibilityMode": "Teks Besar & Kontras Tinggi",
+  "settingsAccessibilityModeHint": "Ukuran font lebih besar, label lebih jelas",
+  "generalSettingsAppearance": "Tampilan",
+  "generalSettingsLanguageRegion": "Bahasa & Wilayah",
+  "generalSettingsReset": "Reset ke Default",
+  "generalSettingsResetConfirm": "Kembalikan pengaturan bahasa, tema, dan aksesibilitas ke bawaan?",
+  "generalSettingsResetTitle": "Reset Pengaturan Umum",
+  "generalSettingsInfoDescription": "Bahasa mempengaruhi seluruh tampilan aplikasi dan cetak struk. Tema mengatur mode cerah/gelap. Aksesibilitas meningkatkan kontras dan ukuran teks.",
+  "settingsShopInfo": "Informasi Toko",
+  "settingsShopName": "Nama Toko",
+  "settingsAddress": "Alamat",
+  "settingsPhone": "No. Telepon",
+  "settingsTaxId": "NPWP / Tax ID",
+  "settingsSales": "Penjualan",
+  "settingsCurrency": "Mata Uang",
+  "settingsDateFormat": "Format Tanggal",
+  "settingsReceipt": "Struk / Nota",
+  "settingsReceiptNote": "Catatan Bawah Struk",
+  "settingsReceiptNoteHint": "Terima kasih telah berbelanja",
+  "settingsShowShopInfo": "Tampilkan info toko di struk",
+  "settingsSectionContent": "Konten",
+  "settingsSectionPreview": "Pratinjau",
+  "settingsSectionTax": "Pajak",
+  "settingsSaved": "Pengaturan disimpan",
+  "shopNameRequired": "Nama toko wajib diisi",
+  "shopNameTooLong": "Nama toko terlalu panjang",
+  "addressTooLong": "Alamat terlalu panjang",
+  "phoneInvalid": "Nomor telepon tidak valid",
+  "taxIdInvalid": "NPWP / Tax ID harus 13 atau 16 digit",
+  "taxIdChecksumInvalid": "Nomor NPWP / Tax ID tidak valid. Silakan periksa kembali.",
+  "shopInfoEmptyPreview": "Info toko kamu akan muncul di sini",
+  "langThai": "ภาษาไทย",
+  "langEnglish": "English",
+  "printReceipt": "Cetak Struk",
+  "shareReceipt": "Bagikan Struk",
+  "reprintReceipt": "Cetak Ulang Struk",
+  "shareReceiptCopy": "Bagikan Salinan",
+  "receiptLabelReceipt": "Struk",
+  "receiptLabelPayment": "Pembayaran",
+  "receiptLabelTotal": "Total",
+  "receiptLabelReceived": "Diterima",
+  "receiptLabelChange": "Kembalian",
+  "receiptLabelNote": "Catatan",
+  "receiptLabelVat": "PPN",
+  "receiptLabelVatIncluded": "PPN {rate}% (termasuk)",
+  "@receiptLabelVatIncluded": {
+    "placeholders": {
+      "rate": {
+        "type": "Object"
+      }
+    }
+  },
+  "receiptLabelSubtotal": "Subtotal",
+  "settingsAutoPrintPrompt": "Tanyakan cetak struk setelah transaksi",
+  "settingsVatRate": "Tarif PPN (%)",
+  "settingsVatMode": "Mode PPN",
+  "settingsReceiptPreviewStyle": "Gaya Pratinjau Struk",
+  "settingsShowPreSalePreview": "Tampilkan pratinjau struk sebelum bayar",
+  "settingsShowPostSalePreview": "Tampilkan pratinjau struk setelah bayar",
+  "receiptPreviewStyleThermal": "Kertas Thermal",
+  "receiptPreviewStyleCard": "Kartu",
+  "receiptPreviewStyleNone": "Tanpa Pratinjau",
+  "receiptPreview": "Pratinjau Struk",
+  "viewReceipt": "Lihat struk",
+  "hideReceipt": "Sembunyikan struk",
+  "vatModeNone": "Tanpa PPN",
+  "vatModeInclusive": "Termasuk PPN",
+  "vatModeExclusive": "Belum Termasuk PPN",
+  "voided": "DIBATALKAN",
+  "voidSale": "Batalkan Transaksi",
+  "voidSaleConfirm": "Batalkan transaksi ini? Stok barang akan dikembalikan.",
+  "voidReason": "Alasan pembatalan",
+  "voidReasonHint": "Masukkan alasan pembatalan",
+  "voidReasonRequired": "Masukkan alasan pembatalan",
+  "voidedAtLabel": "Dibatalkan pada {datetime}",
+  "@voidedAtLabel": {
+    "placeholders": {
+      "datetime": {
+        "type": "String"
+      }
+    }
+  },
+  "voidSuccess": "Transaksi berhasil dibatalkan",
+  "voidedSalesCount": "{count} dibatalkan",
+  "@voidedSalesCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "voidedTotal": "Total Pembatalan",
+  "netRevenue": "Pendapatan Bersih",
+  "adjustStock": "Sesuaikan Stok",
+  "adjustStockTitle": "Sesuaikan Stok: {name}",
+  "@adjustStockTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "adjustQtyLabel": "Perubahan jumlah (+/-)",
+  "adjustReasonLabel": "Alasan *",
+  "adjustReasonRequired": "Masukkan alasan",
+  "adjustSuccess": "Stok berhasil disesuaikan",
+  "inventoryLog": "Log Riwayat Stok",
+  "noInventoryLogs": "Belum ada log riwayat stok",
+  "invLogTypeSale": "Penjualan",
+  "invLogTypeVoidReversal": "Pengembalian Batal",
+  "invLogTypeStockIn": "Stok Masuk",
+  "invLogTypeStockOut": "Stok Keluar",
+  "invLogReasonProductStockEdited": "Stok produk diedit",
+  "invLogSaleRef": "Penjualan · {ref}",
+  "@invLogSaleRef": {
+    "placeholders": {
+      "ref": {
+        "type": "String"
+      }
+    }
+  },
+  "productHistoryShowingLatest": "Menampilkan {count} pergerakan terbaru",
+  "@productHistoryShowingLatest": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },

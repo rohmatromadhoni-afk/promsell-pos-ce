@@ -1778,14 +1778,6 @@
   "searchMatchName": "Nama",
   "searchMatchSku": "SKU",
   "searchMatchBarcode": "Barcode",
-  "searchResultsCount": "{count} hasil ditemukan",
-  "@searchResultsCount": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
   "searchFiltersIgnoredHint": "Menampilkan semua hasil yang cocok",
   "searchShowingCount": "Menampilkan {shown} dari {total}",
   "@searchShowingCount": {

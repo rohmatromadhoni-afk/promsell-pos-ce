@@ -231,7 +231,7 @@
   "noSalesYet": "ยังไม่มีรายการขาย",
   "noSalesInRange": "ไม่มีรายการขายในช่วงวันที่ที่เลือก",
   "changeDateRange": "เปลี่ยนช่วงวันที่",
-  "searchResultsCount": "พบ {count} รายการ",
+  "searchResultsCount": "พบ {n} รายการ",
   "noResultsInDateRange": "ไม่พบในช่วงวันที่นี้ ลองเปลี่ยนช่วงวันที่",
   "searchingInRange": "ค้นหาในช่วง: {range}",
   "tapToExpandHint": "แตะเพื่อดูรายละเอียดเพิ่มเติม",

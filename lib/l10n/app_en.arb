@@ -231,7 +231,7 @@
   "noSalesYet": "No sales yet",
   "noSalesInRange": "No sales in the selected date range",
   "changeDateRange": "Change date range",
-  "searchResultsCount": "{count} results found",
+  "searchResultsCount": "{n} results found",
   "noResultsInDateRange": "No results in this date range. Try changing the date range.",
   "searchingInRange": "Searching within: {range}",
   "tapToExpandHint": "Tap to see more details",

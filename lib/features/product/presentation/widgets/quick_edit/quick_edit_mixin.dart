@@ -67,7 +67,7 @@ mixin QuickEditMixin<T extends StatefulWidget> on State<T> {
     final result = await showQuickEditSheet(
       context,
       field: QuickEditField.price,
-      initialValue: product.price.value.toStringAsFixed(2),
+      initialValue: product.price.value.toStringAsFixed(0),
       productName: product.name,
     );
     if (!context.mounted) return;

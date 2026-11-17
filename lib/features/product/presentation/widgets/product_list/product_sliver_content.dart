@@ -237,7 +237,7 @@ class _ProductGridTile extends StatelessWidget {
               children: [
                 Expanded(
                   child: Text(
-                    product.price.value.toStringAsFixed(2),
+                    product.price.value.toStringAsFixed(0),
                     style: theme.textTheme.labelMedium?.copyWith(
                       color: cs.primary,
                       fontWeight: FontWeight.w700,

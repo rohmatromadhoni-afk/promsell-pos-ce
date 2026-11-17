@@ -105,14 +105,6 @@ class _HomeHeroDashboardCardState extends State<HomeHeroDashboardCard> {
                                       letterSpacing: -0.5,
                                     ),
                               ),
-                              Text(
-                                '.${(widget.todayRevenue.value.abs() % 1).toStringAsFixed(2).substring(2)}',
-                                style: theme.textTheme.headlineLarge?.copyWith(
-                                  fontWeight: FontWeight.w900,
-                                  letterSpacing: -0.5,
-                                  color: cs.primary,
-                                ),
-                              ),
                             ],
                           ),
                         const SizedBox(height: 8),

@@ -150,7 +150,7 @@ class DailyCloseReconciliationCard extends StatelessWidget {
   }
 
   String _amountLabel(String currency, double amount) =>
-      '$currency${amount.toStringAsFixed(2)}';
+      '$currency${amount.toStringAsFixed(0)}';
 
   String _currency(BuildContext context) {
     try {

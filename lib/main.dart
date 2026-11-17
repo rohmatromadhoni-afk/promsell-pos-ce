@@ -26,10 +26,7 @@ void main() async {
 Future<void> runPromsellApp({bool configure = true}) async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // V092-E.1: allow landscape on tablets (shortest side ≥ 600 dp).
-  // Phone stays portrait to avoid flip mid-tender. Detection uses the
-  // first FlutterView's physical size + devicePixelRatio, available
-  // after WidgetsFlutterBinding.ensureInitialized().
+  // Auto-rotate: POS may run in landscape (tablet) or portrait (phone).
   await _applyOrientationForDevice();
 
   if (configure) configureDependencies();
@@ -166,35 +163,10 @@ class PromsellApp extends StatelessWidget {
   }
 }
 
-/// V092-E.1: Detect tablet (shortest side ≥ 600 dp) from the first
-/// FlutterView and allow landscape on tablets. Phones stay portrait.
+/// Allows every orientation on every device: tablet POS is used in
+/// landscape, and phones can rotate too (wide layout kicks in ≥ 600 dp).
 ///
 /// Called before any widget is built, so MediaQuery is not available.
-/// Uses [PlatformDispatcher.views] which is populated after
-/// [WidgetsFlutterBinding.ensureInitialized].
 Future<void> _applyOrientationForDevice() async {
-  const tabletThreshold = 600.0;
-  final views = PlatformDispatcher.instance.views;
-  final isTablet =
-      views.isNotEmpty && _shortestSideDp(views.first) >= tabletThreshold;
-
-  if (isTablet) {
-    await SystemChrome.setPreferredOrientations([
-      DeviceOrientation.portraitUp,
-      DeviceOrientation.landscapeLeft,
-      DeviceOrientation.landscapeRight,
-    ]);
-  } else {
-    await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-  }
-}
-
-double _shortestSideDp(FlutterView view) {
-  final physical = view.physicalSize;
-  if (physical == Size.zero) return 0;
-  final dpr = view.devicePixelRatio;
-  if (dpr <= 0) return 0;
-  final widthDp = physical.width / dpr;
-  final heightDp = physical.height / dpr;
-  return widthDp < heightDp ? widthDp : heightDp;
+  await SystemChrome.setPreferredOrientations(DeviceOrientation.values);
 }

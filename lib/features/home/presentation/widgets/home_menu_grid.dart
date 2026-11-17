@@ -34,12 +34,6 @@ class HomeMenuGrid extends StatelessWidget {
         item: HomeMenuItem.customers,
       ),
       _MenuItem(
-        icon: Icons.local_offer_outlined,
-        label: l10n.promotionsTitle,
-        iconColor: cs.error,
-        item: HomeMenuItem.promotions,
-      ),
-      _MenuItem(
         icon: TablerIcons.receipt2,
         label: l10n.homeHistory,
         iconColor: cs.secondary,

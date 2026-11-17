@@ -427,11 +427,6 @@ class SettingsTileBuilders {
         tiles: discountTiles(context, s, st, l10n),
       ),
       SettingsSectionData(
-        title: l10n.settingsPayments,
-        accent: st.softAccent,
-        tiles: paymentTiles(context, s, st, l10n),
-      ),
-      SettingsSectionData(
         title: l10n.settingsDayClose,
         accent: st.neutralAccent,
         tiles: dayCloseTiles(context, s, st, l10n),

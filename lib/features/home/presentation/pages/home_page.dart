@@ -276,25 +276,6 @@ class _HomePageState extends State<HomePage> with RouteAware {
                         onTap: _menuTapCallback,
                         child: const HomeMenuGrid(),
                       ),
-                      const SizedBox(height: 16),
-                      BlocBuilder<PromotionBloc, PromotionState>(
-                        bloc: _promotionBloc,
-                        builder: (context, state) {
-                          final active = state.promotions
-                              .where((p) => p.isCurrentlyActive)
-                              .toList();
-                          final promo = active.isNotEmpty ? active.first : null;
-                          return HomePromotionBanner(
-                            promotion: promo,
-                            onTap: () => Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (_) => const PromotionListPage(),
-                              ),
-                            ),
-                          );
-                        },
-                      ),
                       const SizedBox(height: 24),
                     ],
                   ),

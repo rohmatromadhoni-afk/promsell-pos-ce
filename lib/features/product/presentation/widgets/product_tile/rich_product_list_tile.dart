@@ -24,7 +24,7 @@ String _compactNumber(num value) {
     final k = value / 1000;
     return k >= 100 ? '${k.toStringAsFixed(0)}K' : '${k.toStringAsFixed(1)}K';
   }
-  return value.toStringAsFixed(2);
+  return value.toStringAsFixed(0);
 }
 
 class RichProductListTile extends StatelessWidget {

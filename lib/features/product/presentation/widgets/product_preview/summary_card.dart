@@ -231,7 +231,7 @@ class SummaryCard extends StatelessWidget {
                       const SizedBox(height: 2),
                       Semantics(
                         label:
-                            '${l10n.retailPrice}: $currency${product.price.value.toStringAsFixed(2)}',
+                            '${l10n.retailPrice}: $currency${product.price.value.toStringAsFixed(0)}',
                         child: MoneyText(
                           value: product.price.value,
                           currency: currency,

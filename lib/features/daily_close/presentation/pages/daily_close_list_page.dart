@@ -202,7 +202,7 @@ class _DailyCloseHistoryTile extends StatelessWidget {
   }
 
   String _amount(String currency, double value) =>
-      '$currency${value.toStringAsFixed(2)}';
+      '$currency${value.toStringAsFixed(0)}';
 
   String _currency(BuildContext context) {
     try {

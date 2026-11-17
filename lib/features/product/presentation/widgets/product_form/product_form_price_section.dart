@@ -294,7 +294,7 @@ class ProductFormMarkupPresetChips extends StatelessWidget {
                               cost,
                               p,
                             );
-                            priceCtrl.text = next.value.toStringAsFixed(2);
+                            priceCtrl.text = next.value.toStringAsFixed(0);
                             priceCtrl.selection = TextSelection.collapsed(
                               offset: priceCtrl.text.length,
                             );

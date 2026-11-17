@@ -43,7 +43,7 @@ class _OptionEditSheetState extends State<_OptionEditSheet> {
     super.initState();
     _nameCtrl = TextEditingController(text: widget.existing?.name ?? '');
     _priceCtrl = TextEditingController(
-      text: widget.existing?.priceDelta.value.toStringAsFixed(2) ?? '0.00',
+      text: widget.existing?.priceDelta.value.toStringAsFixed(0) ?? '0',
     );
   }
 

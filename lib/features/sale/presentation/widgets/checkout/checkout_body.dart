@@ -221,8 +221,7 @@ class _CheckoutBodyState extends State<CheckoutBody> {
                               children: [
                                 PaymentMethodSelector(
                                   method: _method,
-                                  promptpayEnabled:
-                                      settings.promptpayId.isNotEmpty,
+                                  promptpayEnabled: false,
                                   onChanged: (m) {
                                     HapticFeedback.selectionClick();
                                     setState(() {
@@ -355,10 +354,7 @@ class _CheckoutBodyState extends State<CheckoutBody> {
                                                     .toStringAsFixed(2);
                                           }
                                           if (_method == 'cash') {
-                                            _method =
-                                                settings.promptpayId.isNotEmpty
-                                                ? 'promptpay'
-                                                : 'transfer';
+                                            _method = 'transfer';
                                           }
                                         }
                                       });

@@ -510,7 +510,7 @@ class _ProductCsvImportPageState extends State<ProductCsvImportPage> {
                   dense: true,
                   title: Text(row.name),
                   subtitle: Text(
-                    '${row.price.toStringAsFixed(2)}'
+                    '${row.price.toStringAsFixed(0)}'
                     '${row.sku != null ? ' · ${l10n.skuLabel}: ${row.sku}' : ''}'
                     '${row.categoryName != null ? ' · ${row.categoryName}' : ''}',
                   ),

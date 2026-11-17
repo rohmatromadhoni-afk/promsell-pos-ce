@@ -186,8 +186,8 @@ class _DailyClosePageState extends State<DailyClosePage> {
   }
 
   void _syncControllers(DailyCloseState state) {
-    _openingController.text = state.openingCash.toStringAsFixed(2);
-    _countedController.text = state.countedCash.toStringAsFixed(2);
+    _openingController.text = state.openingCash.toStringAsFixed(0);
+    _countedController.text = state.countedCash.toStringAsFixed(0);
     _noteController.text = state.note;
   }
 

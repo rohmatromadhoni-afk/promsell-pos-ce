@@ -51,8 +51,8 @@ class SaleExpansionTile extends StatelessWidget {
     final l10n = context.l10n;
     final receiptLabel = sale.receiptNumber ?? '#${sale.id.substring(0, 8)}';
     final semanticLabel = isVoided
-        ? '$receiptLabel, ${l10n.voided}, ${settings.currency}${sale.totalAmount.value.toStringAsFixed(2)}'
-        : '$receiptLabel, ${localizePaymentMethod(context, sale.primaryPaymentMethod)}, ${settings.currency}${sale.totalAmount.value.toStringAsFixed(2)}, ${l10n.itemsCount(sale.items.length)}';
+        ? '$receiptLabel, ${l10n.voided}, ${settings.currency}${sale.totalAmount.value.toStringAsFixed(0)}'
+        : '$receiptLabel, ${localizePaymentMethod(context, sale.primaryPaymentMethod)}, ${settings.currency}${sale.totalAmount.value.toStringAsFixed(0)}, ${l10n.itemsCount(sale.items.length)}';
 
     final accentColor = isVoided ? scheme.error : scheme.primary;
     final accentBg = isVoided ? scheme.errorContainer : scheme.primaryContainer;
@@ -243,7 +243,7 @@ class _SaleItemsSection extends StatelessWidget {
                       ],
                       const SizedBox(height: 2),
                       Text(
-                        '${item.qty} × $currency${item.price.value.toStringAsFixed(2)}',
+                        '${item.qty} × $currency${item.price.value.toStringAsFixed(0)}',
                         style: theme.textTheme.bodySmall?.copyWith(
                           color: scheme.onSurfaceVariant,
                           fontFamily: 'NotoSansThai',
@@ -252,7 +252,7 @@ class _SaleItemsSection extends StatelessWidget {
                       if (item.discountAmount.value > 0) ...[
                         const SizedBox(height: 2),
                         Text(
-                          '${l10n.discountSectionLabel}: -$currency${item.discountAmount.value.toStringAsFixed(2)}',
+                          '${l10n.discountSectionLabel}: -$currency${item.discountAmount.value.toStringAsFixed(0)}',
                           style: theme.textTheme.bodySmall?.copyWith(
                             color: scheme.error,
                             fontFamily: 'NotoSansThai',

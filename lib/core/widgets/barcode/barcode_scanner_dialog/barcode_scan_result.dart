@@ -93,7 +93,7 @@ class BarcodeScanResult extends StatelessWidget {
                   productPrice!,
                   currency!.trim(),
                 )
-              : productPrice!.toStringAsFixed(2))
+              : productPrice!.toStringAsFixed(0))
         : null;
 
     return Column(

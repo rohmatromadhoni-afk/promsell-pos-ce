@@ -50,7 +50,7 @@ class _ProductFormPageState extends State<ProductFormPage> {
   late final _nameCtrl = TextEditingController(text: widget.product?.name);
   final _nameFocusNode = FocusNode();
   late final _priceCtrl = TextEditingController(
-    text: widget.product?.price.value.toStringAsFixed(2) ?? '',
+    text: widget.product?.price.value.toStringAsFixed(0) ?? '',
   );
   late final _stockCtrl = TextEditingController(
     text: widget.product?.stock.toString() ?? '0',
@@ -64,7 +64,7 @@ class _ProductFormPageState extends State<ProductFormPage> {
   late final _costCtrl = TextEditingController(
     text: () {
       final cost = widget.product?.cost;
-      return cost != null ? cost.value.toStringAsFixed(2) : '';
+      return cost != null ? cost.value.toStringAsFixed(0) : '';
     }(),
   );
   late final _descriptionCtrl = TextEditingController(

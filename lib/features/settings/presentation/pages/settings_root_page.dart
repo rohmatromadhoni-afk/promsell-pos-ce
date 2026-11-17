@@ -87,13 +87,6 @@ List<_ReadinessCheck> _readinessChecks({
       page: const ShopInfoSettingsPage(),
       highPriority: false,
     ),
-    _ReadinessCheck(
-      label: l10n.promptpay,
-      done: s.promptpayId.isNotEmpty,
-      icon: TablerIcons.qrcode,
-      page: const PromptpaySettingsPage(),
-      highPriority: false,
-    ),
     // Ready only when a backup exists AND it is inside the reminder window.
     // Reminders turned off still count until a first backup exists, so the
     // checklist keeps nudging instead of silently passing.

@@ -102,7 +102,7 @@ class RichProductGridCard extends StatelessWidget {
                           ),
                           if (product.trackStock && product.cost > Money.zero)
                             Text(
-                              '$currency${product.cost.value.toStringAsFixed(2)}',
+                              '$currency${product.cost.value.toStringAsFixed(0)}',
                               style: theme.textTheme.bodySmall?.copyWith(
                                 color: theme.colorScheme.onSurfaceVariant,
                                 fontSize: 10,

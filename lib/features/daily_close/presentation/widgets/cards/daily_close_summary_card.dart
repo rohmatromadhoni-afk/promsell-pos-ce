@@ -140,7 +140,7 @@ class _Metric extends StatelessWidget {
         : MoneyText(value: value, currency: currency);
     return Semantics(
       label:
-          '$label: ${isCount ? value.toInt() : '$currency${value.toStringAsFixed(2)}'}',
+          '$label: ${isCount ? value.toInt() : '$currency${value.toStringAsFixed(0)}'}',
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

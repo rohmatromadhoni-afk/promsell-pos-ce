@@ -276,7 +276,7 @@ class _GroupCard extends StatelessWidget {
                     children: [
                       if (group.options[i].priceDelta > Money.zero)
                         Text(
-                          '+$currency ${group.options[i].priceDelta.value.toStringAsFixed(2)}',
+                          '+$currency ${group.options[i].priceDelta.value.toStringAsFixed(0)}',
                           style: Theme.of(context).textTheme.bodySmall,
                         ),
                       IconButton(

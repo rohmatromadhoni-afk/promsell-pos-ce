@@ -29,11 +29,34 @@ jobs:
 
       - run: dart run build_runner build --delete-conflicting-outputs
 
-      - run: flutter build apk --debug --flavor prod
+      - name: Siapkan kunci tanda tangan
+        shell: bash
+        env:
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+        run: |
+          set -euo pipefail
+          if [ -z "${KEYSTORE_BASE64:-}" ]; then
+            echo "::error::Secret KEYSTORE_BASE64 belum diset di repo ini."
+            exit 1
+          fi
+          printf '%s' "$KEYSTORE_BASE64" | base64 -d > android/app/keystore.jks
+          {
+            echo "storeFile=keystore.jks"
+            echo "storePassword=$KEYSTORE_PASSWORD"
+            echo "keyAlias=$KEY_ALIAS"
+            echo "keyPassword=$KEY_PASSWORD"
+          } > android/app/keystore.properties
+          echo "Keystore siap."
+
+      - run: flutter build apk --release --flavor prod --build-number=${{ github.run_number }}
+
       - name: Simpan log Gradle lengkap
         if: failure()
         working-directory: android
-        run: bash ./gradlew assembleDebug --stacktrace > ../gradle-log.txt 2>&1 || true
+        run: bash ./gradlew assembleProdRelease --stacktrace > ../gradle-log.txt 2>&1 || true
 
       - name: Upload log Gradle
         if: failure()
@@ -44,5 +67,5 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: promsell-debug-apk
-          path: build/app/outputs/flutter-apk/app-prod-debug.apk
+          name: promsell-release-apk
+          path: build/app/outputs/flutter-apk/app-prod-release.apk

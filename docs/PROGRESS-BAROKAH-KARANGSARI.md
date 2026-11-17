@@ -1,4 +1,4 @@
-# Progres PromSell POS — Upah Barokah
+# Progres PromSell POS — Barokah Karangsari
 
 Catatan lanjutan (terakhir diperbarui: 17 Nov 2026).
 

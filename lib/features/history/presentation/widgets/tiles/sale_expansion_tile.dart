@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:promsell_pos_ce/core/di/injection_container.dart';
 import 'package:promsell_pos_ce/core/widgets/dialogs/app_lock_pin_dialog.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
@@ -8,6 +9,8 @@ import 'package:promsell_pos_ce/core/testing/test_keys.dart';
 import 'package:promsell_pos_ce/core/utils/payment_method_helper.dart';
 import 'package:promsell_pos_ce/core/widgets/dialogs/app_dialog_shell.dart';
 import 'package:promsell_pos_ce/core/widgets/primitives/money_text.dart';
+import 'package:promsell_pos_ce/features/accounts/data/account_service.dart';
+import 'package:promsell_pos_ce/features/accounts/domain/app_user.dart';
 import 'package:promsell_pos_ce/features/history/presentation/bloc/history_bloc.dart';
 import 'package:promsell_pos_ce/features/history/presentation/bloc/history_event.dart';
 import 'package:promsell_pos_ce/features/history/presentation/widgets/tiles/sale_expansion_tile/sale_receipt_actions.dart';
@@ -16,6 +19,14 @@ import 'package:promsell_pos_ce/shared/domain/entities/sale.dart';
 import 'package:promsell_pos_ce/features/sale/domain/services/sales_day_lock.dart';
 import 'package:promsell_pos_ce/features/settings/presentation/cubit/settings_cubit.dart';
 import 'package:tabler_icons_plus/tabler_icons_plus.dart';
+
+bool _canVoidSale() {
+  try {
+    return sl<AccountService>().can(UserPermission.voidSale);
+  } catch (_) {
+    return true;
+  }
+}
 
 class SaleExpansionTile extends StatelessWidget {
   const SaleExpansionTile({
@@ -529,7 +540,7 @@ class _SaleActionsBar extends StatelessWidget {
       alignment: MainAxisAlignment.end,
       spacing: 8,
       children: [
-        if (!isVoided)
+        if (!isVoided && _canVoidSale())
           isVoiding
               ? const Padding(
                   padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),

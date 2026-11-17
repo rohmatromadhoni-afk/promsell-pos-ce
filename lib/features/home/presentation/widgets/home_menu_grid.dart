@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:promsell_pos_ce/core/di/injection_container.dart';
 import 'package:promsell_pos_ce/core/extensions/l10n_extension.dart';
 import 'package:promsell_pos_ce/core/testing/test_keys.dart';
+import 'package:promsell_pos_ce/features/accounts/data/account_service.dart';
+import 'package:promsell_pos_ce/features/accounts/domain/app_user.dart';
 import 'package:tabler_icons_plus/tabler_icons_plus.dart';
 
 enum HomeMenuItem { sell, products, customers, promotions, history, closeDay }
@@ -14,7 +17,7 @@ class HomeMenuGrid extends StatelessWidget {
     final theme = Theme.of(context);
     final cs = theme.colorScheme;
 
-    final items = [
+    final allItems = [
       _MenuItem(
         icon: TablerIcons.buildingStore,
         label: l10n.navSale,
@@ -47,6 +50,27 @@ class HomeMenuGrid extends StatelessWidget {
         tileKey: const Key(TestKeys.homeCloseDayTile),
       ),
     ];
+
+    // Staff only see the shortcuts the owner allowed for their account.
+    final accounts = sl.isRegistered<AccountService>()
+        ? sl<AccountService>()
+        : null;
+    bool allowed(UserPermission permission) =>
+        accounts?.can(permission) ?? true;
+    final items = allItems.where((entry) {
+      switch (entry.item) {
+        case HomeMenuItem.history:
+          return allowed(UserPermission.viewReports);
+        case HomeMenuItem.closeDay:
+          return allowed(UserPermission.dailyClose);
+        case HomeMenuItem.customers:
+          return allowed(UserPermission.customers);
+        case HomeMenuItem.sell:
+        case HomeMenuItem.products:
+        case HomeMenuItem.promotions:
+          return true;
+      }
+    }).toList();
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24),

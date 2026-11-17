@@ -5,9 +5,10 @@ import 'package:promsell_pos_ce/features/daily_close/presentation/pages/daily_cl
 import 'package:promsell_pos_ce/features/restaurant_table/presentation/pages/floor_page.dart';
 import 'package:promsell_pos_ce/features/restaurant_table/presentation/pages/table_management_page.dart';
 import 'package:promsell_pos_ce/features/settings/domain/entities/settings.dart';
+import 'package:promsell_pos_ce/features/accounts/presentation/account_text.dart';
+import 'package:promsell_pos_ce/features/accounts/presentation/pages/account_settings_page.dart';
 import 'package:promsell_pos_ce/features/settings/presentation/pages/about_page.dart';
 import 'package:promsell_pos_ce/features/settings/presentation/pages/backup_settings_page.dart';
-import 'package:promsell_pos_ce/features/settings/presentation/pages/app_lock_settings_page.dart';
 import 'package:promsell_pos_ce/features/settings/presentation/pages/barcode_settings_page.dart';
 import 'package:promsell_pos_ce/features/settings/presentation/pages/db_health_page.dart';
 import 'package:promsell_pos_ce/features/settings/presentation/pages/discount_policy_settings_page.dart';
@@ -302,11 +303,17 @@ class SettingsTileBuilders {
         page: const BackupSettingsPage(),
       ),
       SettingsTileData(
-        icon: TablerIcons.pin,
-        title: l10n.appLockTitle,
+        icon: Icons.people_outline,
+        title: AccountText.of(context).t(
+          'Account & staff',
+          'Akun & Pegawai',
+        ),
         accent: st.softAccent,
-        subtitle: l10n.appLockSubtitle,
-        page: const AppLockSettingsPage(),
+        subtitle: AccountText.of(context).t(
+          'Owner and staff access',
+          'Akses owner dan pegawai',
+        ),
+        page: const AccountSettingsPage(),
       ),
       SettingsTileData(
         icon: TablerIcons.database,

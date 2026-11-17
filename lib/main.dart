@@ -12,6 +12,7 @@ import 'package:promsell_pos_ce/core/utils/app_logger.dart';
 import 'package:promsell_pos_ce/core/theme/app_theme.dart';
 import 'package:promsell_pos_ce/core/shell/main_shell.dart';
 import 'package:promsell_pos_ce/core/widgets/splash/app_splash_wrapper.dart';
+import 'package:promsell_pos_ce/features/accounts/presentation/pages/account_gate.dart';
 import 'package:promsell_pos_ce/features/home/presentation/pages/home_page.dart';
 import 'package:promsell_pos_ce/features/onboarding/presentation/pages/onboarding_page.dart';
 import 'package:promsell_pos_ce/features/settings/data/services/backup_restore_service.dart';
@@ -114,7 +115,7 @@ class PromsellApp extends StatelessWidget {
         builder: (ctx, state) {
           final showOnboarding = !state.settings.onboardingCompleted;
           return MaterialApp(
-            title: 'Promsell POS',
+            title: 'Barokah Karangsari',
             debugShowCheckedModeBanner: false,
             locale: settingsLocale(state.settings),
             theme: AppTheme.light,
@@ -153,7 +154,7 @@ class PromsellApp extends StatelessWidget {
             home: AppSplashWrapper(
               child: showOnboarding
                   ? const OnboardingPage()
-                  : const MainShell(),
+                  : const AccountGate(child: MainShell()),
             ),
             navigatorObservers: [HomePage.routeObserver],
           );

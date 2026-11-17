@@ -11,6 +11,9 @@ import 'package:promsell_pos_ce/core/widgets/nav/bottom_navigation_bar.dart';
 import 'package:promsell_pos_ce/core/widgets/nav/nav_swipe_helper.dart';
 import 'package:promsell_pos_ce/core/shell/keyboard_shortcuts.dart';
 import 'package:promsell_pos_ce/core/shell/main_shell_scope.dart';
+import 'package:promsell_pos_ce/features/accounts/data/account_service.dart';
+import 'package:promsell_pos_ce/features/accounts/domain/app_user.dart';
+import 'package:promsell_pos_ce/features/accounts/presentation/account_text.dart';
 import 'package:promsell_pos_ce/features/home/presentation/pages/home_page.dart';
 import 'package:promsell_pos_ce/features/product/presentation/bloc/category_bloc.dart';
 import 'package:promsell_pos_ce/features/product/presentation/bloc/product_bloc.dart';
@@ -84,6 +87,14 @@ class MainShellState extends State<MainShell> with WidgetsBindingObserver {
   Widget _pageFor(int i) => _cachedPages.putIfAbsent(i, _pageBuilders[i]);
 
   void _handleTabTap(int i) {
+    if (i == 4 && !_can(UserPermission.settings)) {
+      AppSnackBar.warning(context, _noAccessMessage);
+      return;
+    }
+    if (i == 3 && !_can(UserPermission.viewReports)) {
+      AppSnackBar.warning(context, _noAccessMessage);
+      return;
+    }
     if (i != _index) {
       setState(() => _index = i);
       if (i == 1) {
@@ -116,9 +127,26 @@ class MainShellState extends State<MainShell> with WidgetsBindingObserver {
     }
   }
 
+  String get _noAccessMessage => AccountText.of(context).t(
+    'You do not have access to this menu',
+    'Anda tidak punya akses ke menu ini',
+  );
+
+  /// `null` when DI is not configured (widget/integration tests).
+  AccountService? get _accountsOrNull =>
+      sl.isRegistered<AccountService>() ? sl<AccountService>() : null;
+
+  /// Missing account service means "allow everything" (tests, legacy runs).
+  bool _can(UserPermission permission) =>
+      _accountsOrNull?.can(permission) ?? true;
+
+  void _handleVisibleTabTap(List<int> allowedTabs, int visibleIndex) {
+    if (visibleIndex < 0 || visibleIndex >= allowedTabs.length) return;
+    _handleTabTap(allowedTabs[visibleIndex]);
+  }
+
   void _scrollToTop() {
-    final controller = PrimaryScrollController.maybeOf(context);
-    if (controller != null && controller.hasClients) {
+    final controller = PrimaryScrollController.maybeOf(context);    if (controller != null && controller.hasClients) {
       controller.animateTo(
         0,
         duration: const Duration(milliseconds: 300),
@@ -128,12 +156,11 @@ class MainShellState extends State<MainShell> with WidgetsBindingObserver {
   }
 
   void _handleSwipe(DragEndDetails details) {
-    NavSwipeHelper.handleSwipe(
-      details,
-      _index,
-      _pageBuilders.length,
-      _handleTabTap,
-    );
+    NavSwipeHelper.handleSwipe(details, _index, _pageBuilders.length, (i) {
+      if (i == 3 && !_can(UserPermission.viewReports)) return;
+      if (i == 4 && !_can(UserPermission.settings)) return;
+      _handleTabTap(i);
+    });
   }
 
   Future<void> _onSaleLongPress(String key) async {
@@ -184,7 +211,7 @@ class MainShellState extends State<MainShell> with WidgetsBindingObserver {
   @override
   Widget build(BuildContext context) {
     final l10n = context.l10n;
-    final navItems = [
+    final allNavItems = [
       NavItem(
         icon: Icons.home_outlined,
         activeIcon: Icons.home,
@@ -215,6 +242,17 @@ class MainShellState extends State<MainShell> with WidgetsBindingObserver {
         label: l10n.navSettings,
       ),
     ];
+
+    // Owner-only tabs (reports, settings) are hidden for staff accounts.
+    final allowedTabs = <int>[
+      0,
+      1,
+      2,
+      if (_can(UserPermission.viewReports)) 3,
+      if (_can(UserPermission.settings)) 4,
+    ];
+    final navItems = [for (final tab in allowedTabs) allNavItems[tab]];
+    final visibleIndex = allowedTabs.indexOf(_index);
 
     final body = MultiBlocProvider(
       providers: [
@@ -270,8 +308,9 @@ class MainShellState extends State<MainShell> with WidgetsBindingObserver {
                       body: Row(
                         children: [
                           NavigationRail(
-                            selectedIndex: _index,
-                            onDestinationSelected: _handleTabTap,
+                            selectedIndex: visibleIndex < 0 ? 0 : visibleIndex,
+                            onDestinationSelected: (visible) =>
+                                _handleVisibleTabTap(allowedTabs, visible),
                             labelType: NavigationRailLabelType.selected,
                             destinations: navItems
                                 .map(
@@ -292,8 +331,9 @@ class MainShellState extends State<MainShell> with WidgetsBindingObserver {
                   return Scaffold(
                     body: body,
                     bottomNavigationBar: AppBottomNavigationBar(
-                      selectedIndex: _index,
-                      onTap: _handleTabTap,
+                      selectedIndex: visibleIndex < 0 ? 0 : visibleIndex,
+                      onTap: (visible) =>
+                          _handleVisibleTabTap(allowedTabs, visible),
                       items: navItems,
                     ),
                   );

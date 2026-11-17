@@ -4,6 +4,7 @@ import 'package:promsell_pos_ce/core/extensions/l10n_extension.dart';
 import 'package:promsell_pos_ce/core/services/app_lock_service.dart';
 import 'package:promsell_pos_ce/core/services/store_pin_setup.dart';
 import 'package:promsell_pos_ce/core/utils/secure_screen.dart';
+import 'package:promsell_pos_ce/features/accounts/data/account_service.dart';
 import 'package:promsell_pos_ce/core/widgets/primitives/app_snack_bar.dart';
 import 'package:promsell_pos_ce/core/widgets/primitives/safe_text_controller.dart';
 
@@ -15,6 +16,11 @@ Future<bool> ensureAppUnlocked(
   String? title,
   String? wrongPinMessage,
 }) async {
+  // Accounts replace the old per-access PIN: once a user is signed in at app
+  // start, sensitive actions no longer ask for a PIN again.
+  if (sl.isRegistered<AccountService>() && sl<AccountService>().hasSession) {
+    return true;
+  }
   final lock = sl<AppLockService>();
   if (!await lock.isEnabled()) return true;
   if (lock.isSessionUnlocked) return true;

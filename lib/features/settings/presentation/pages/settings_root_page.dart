@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:promsell_pos_ce/core/di/injection_container.dart';
 import 'package:promsell_pos_ce/core/extensions/l10n_extension.dart';
-import 'package:promsell_pos_ce/core/services/app_lock_service.dart';
 import 'package:promsell_pos_ce/core/widgets/primitives/app_snack_bar.dart';
 import 'package:promsell_pos_ce/features/restaurant_table/presentation/bloc/table_bloc.dart';
 import 'package:promsell_pos_ce/features/restaurant_table/presentation/bloc/table_event.dart';
@@ -12,7 +11,6 @@ import 'package:promsell_pos_ce/features/restaurant_table/presentation/pages/tab
 import 'package:promsell_pos_ce/features/settings/domain/entities/settings.dart';
 import 'package:promsell_pos_ce/features/settings/presentation/cubit/settings_cubit.dart';
 import 'package:promsell_pos_ce/core/widgets/layout/adaptive_breakpoints.dart';
-import 'package:promsell_pos_ce/features/settings/presentation/pages/app_lock_settings_page.dart';
 import 'package:promsell_pos_ce/features/settings/presentation/pages/backup_settings_page.dart';
 import 'package:promsell_pos_ce/features/settings/presentation/pages/promptpay_settings_page.dart';
 import 'package:promsell_pos_ce/features/settings/presentation/pages/shop_info_settings_page.dart';
@@ -76,7 +74,6 @@ class _ReadinessCheck {
 
 List<_ReadinessCheck> _readinessChecks({
   required Settings s,
-  required bool pinConfigured,
   required AppLocalizations l10n,
 }) {
   return [
@@ -96,13 +93,6 @@ List<_ReadinessCheck> _readinessChecks({
       icon: TablerIcons.databaseExport,
       page: const BackupSettingsPage(),
       highPriority: true,
-    ),
-    _ReadinessCheck(
-      label: l10n.appLockTitle,
-      done: pinConfigured,
-      icon: TablerIcons.lock,
-      page: const AppLockSettingsPage(),
-      highPriority: false,
     ),
   ];
 }
@@ -390,25 +380,10 @@ class _SettingsRootView extends StatefulWidget {
 class _SettingsRootViewState extends State<_SettingsRootView>
     with AutomaticKeepAliveClientMixin {
   int _activeSection = 0;
-  bool _pinConfigured = false;
   List<GlobalKey> _sectionKeys = const [];
 
   @override
   bool get wantKeepAlive => true;
-
-  @override
-  void initState() {
-    super.initState();
-    _loadPinStatus();
-  }
-
-  Future<void> _loadPinStatus() async {
-    if (!sl.isRegistered<AppLockService>()) return;
-    final lock = sl<AppLockService>();
-    final enabled = await lock.isEnabled();
-    final hasPin = await lock.hasPin();
-    if (mounted) setState(() => _pinConfigured = enabled && hasPin);
-  }
 
   @override
   void dispose() {
@@ -453,7 +428,6 @@ class _SettingsRootViewState extends State<_SettingsRootView>
 
     final checks = _readinessChecks(
       s: s,
-      pinConfigured: _pinConfigured,
       l10n: l10n,
     );
 

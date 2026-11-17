@@ -93,7 +93,7 @@ class GeneralResetTile extends StatelessWidget {
     HapticFeedback.lightImpact();
     onUpdate(
       s.copyWith(
-        localeCode: 'th',
+        localeCode: 'en',
         themeModeName: 'system',
         accessibilityMode: false,
       ),

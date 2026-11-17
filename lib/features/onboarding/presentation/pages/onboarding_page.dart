@@ -41,7 +41,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
   final _addressController = TextEditingController();
   final _phoneController = TextEditingController();
   final _taxIdController = TextEditingController();
-  final _currencyCtrl = TextEditingController(text: '฿');
+  final _currencyCtrl = TextEditingController(text: 'Rp');
   final _vatRateController = TextEditingController(text: '7');
   final _promptPayController = TextEditingController();
   final _shopNameFocus = FocusNode();

@@ -129,7 +129,7 @@ class PromsellApp extends StatelessWidget {
               GlobalWidgetsLocalizations.delegate,
               GlobalCupertinoLocalizations.delegate,
             ],
-            supportedLocales: AppLocalizations.supportedLocales,
+            supportedLocales: const [Locale('en'), Locale('id')],
             // Clamp text scaling to 1.3x — POS UI must stay usable on small tablets.
             // Auto-detect RTL from locale for future Arabic/Hebrew support.
             builder: (context, child) {

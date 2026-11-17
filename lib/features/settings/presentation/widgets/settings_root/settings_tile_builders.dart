@@ -36,8 +36,8 @@ class SettingsTileBuilders {
   static String localeLabel(BuildContext context, Settings s) {
     final l10n = context.l10n;
     switch (s.localeCode) {
-      case 'th':
-        return l10n.langThai;
+      case 'id':
+        return l10n.langIndonesian;
       case 'en':
         return l10n.langEnglish;
       default:

@@ -22,7 +22,7 @@ class GeneralLanguageTile extends StatelessWidget {
     final l10n = context.l10n;
     final s = settings;
 
-    final label = s.localeCode == 'th' ? l10n.langThai : l10n.langEnglish;
+    final label = s.localeCode == 'id' ? l10n.langIndonesian : l10n.langEnglish;
 
     return Semantics(
       button: true,
@@ -73,7 +73,7 @@ class GeneralLanguageTile extends StatelessWidget {
     SettingsThemeExtension st,
     AppLocalizations l10n,
   ) {
-    final options = const [('th'), ('en')];
+    final options = const [('en'), ('id')];
     showDialog(
       context: context,
       builder: (ctx) => AlertDialog(
@@ -82,7 +82,9 @@ class GeneralLanguageTile extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: options.map((code) {
             final isSelected = code == s.localeCode;
-            final label = code == 'th' ? l10n.langThai : l10n.langEnglish;
+            final label = code == 'id'
+                ? l10n.langIndonesian
+                : l10n.langEnglish;
             return DialogOptionTile(
               icon: Icons.language,
               label: label,

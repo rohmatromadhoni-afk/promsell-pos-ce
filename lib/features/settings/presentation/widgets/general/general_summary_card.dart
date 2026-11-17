@@ -15,8 +15,8 @@ class GeneralSummaryCard extends StatelessWidget {
   final String themeModeName;
 
   String _languageLabel(BuildContext context) {
-    return localeCode == 'th'
-        ? context.l10n.langThai
+    return localeCode == 'id'
+        ? context.l10n.langIndonesian
         : context.l10n.langEnglish;
   }
 

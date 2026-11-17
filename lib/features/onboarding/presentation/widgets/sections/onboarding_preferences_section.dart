@@ -43,12 +43,12 @@ class OnboardingPreferencesSection extends StatelessWidget {
           OnboardingSegmentedControl<String>(
             segments: [
               ButtonSegment(
-                value: 'th',
-                label: Text(context.l10n.onboardingThai),
-              ),
-              ButtonSegment(
                 value: 'en',
                 label: Text(context.l10n.onboardingEnglish),
+              ),
+              ButtonSegment(
+                value: 'id',
+                label: Text(context.l10n.onboardingIndonesian),
               ),
             ],
             selected: {settings.localeCode},
@@ -75,25 +75,10 @@ class OnboardingPreferencesSection extends StatelessWidget {
                   context: context,
                   title: context.l10n.onboardingCurrency,
                   selected: currencyController!.text,
-                  options: [
+                  options: const [
                     OnboardingSelectionOption(
-                      value: '฿',
-                      label: context.l10n.onboardingCurrencyBaht,
-                      icon: Icons.currency_exchange,
-                    ),
-                    OnboardingSelectionOption(
-                      value: r'$',
-                      label: context.l10n.onboardingCurrencyUsd,
-                      icon: Icons.currency_exchange,
-                    ),
-                    OnboardingSelectionOption(
-                      value: '€',
-                      label: context.l10n.onboardingCurrencyEur,
-                      icon: Icons.currency_exchange,
-                    ),
-                    OnboardingSelectionOption(
-                      value: '¥',
-                      label: context.l10n.onboardingCurrencyJpy,
+                      value: 'Rp',
+                      label: 'Rupiah (Rp)',
                       icon: Icons.currency_exchange,
                     ),
                   ],

@@ -15,7 +15,10 @@ class UiConfigMapper {
 
   UiConfig fromMap(Map<String, String> map) {
     return UiConfig(
-      locale: map[SettingsMapperKeys.keyLocale] ?? 'th',
+      locale: switch (map[SettingsMapperKeys.keyLocale]) {
+        'id' => 'id',
+        _ => 'en',
+      },
       themeMode: parseThemeMode(map[SettingsMapperKeys.keyTheme]),
       dateFormat: map[SettingsMapperKeys.keyDateFormat] ?? 'dd/MM/yyyy',
       ultraCompactMode: parseBool(

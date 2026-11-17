@@ -41,19 +41,6 @@ class OnboardingSettingsSheet {
                 const SizedBox(height: 8),
                 OnboardingSheetOption(
                   icon: TablerIcons.language,
-                  label: l10n.onboardingThai,
-                  selected: settings.localeCode == 'th',
-                  accentColor: accent,
-                  isDark: isDark,
-                  onTap: () {
-                    cubit.updateField(
-                      (_) => settings.copyWith(localeCode: 'th'),
-                    );
-                    Navigator.pop(sheetCtx);
-                  },
-                ),
-                OnboardingSheetOption(
-                  icon: TablerIcons.language,
                   label: l10n.onboardingEnglish,
                   selected: settings.localeCode == 'en',
                   accentColor: accent,
@@ -61,6 +48,19 @@ class OnboardingSettingsSheet {
                   onTap: () {
                     cubit.updateField(
                       (_) => settings.copyWith(localeCode: 'en'),
+                    );
+                    Navigator.pop(sheetCtx);
+                  },
+                ),
+                OnboardingSheetOption(
+                  icon: TablerIcons.language,
+                  label: l10n.onboardingIndonesian,
+                  selected: settings.localeCode == 'id',
+                  accentColor: accent,
+                  isDark: isDark,
+                  onTap: () {
+                    cubit.updateField(
+                      (_) => settings.copyWith(localeCode: 'id'),
                     );
                     Navigator.pop(sheetCtx);
                   },

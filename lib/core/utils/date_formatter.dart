@@ -14,6 +14,7 @@ class DateFormatter {
   static String _localeFor(String languageCode) {
     return switch (languageCode) {
       'th' => 'th_TH',
+      'id' => 'id_ID',
       'en' => 'en_US',
       _ => 'en_US',
     };

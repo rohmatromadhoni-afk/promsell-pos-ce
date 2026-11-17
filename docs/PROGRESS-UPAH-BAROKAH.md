@@ -34,33 +34,52 @@ Catatan penting:
 - File `app_th.arb` masih dipakai sebagai template Flutter (tidak boleh dihapus
   tanpa memindah template ke `app_en.arb`).
 
-## Belum dikerjakan (urutan usulan)
+## Pembagian resmi: versi dasar vs versi perbaikan
 
-1. **Void per item** — sekarang void hanya bisa satu nota penuh.
-   Perlu: kolom status void per baris `sale_items`, migrasi DB, pengembalian
-   stok per item, hitung ulang total nota, UI pilih barang di riwayat.
-2. **Akun owner & staff (pengganti PIN)**
-   - Hapus PIN tiap akses; login sekali di awal.
-   - 2 akun dulu: owner (akses penuh) dan staff (tanpa pengaturan sensitif).
-   - Perlu tabel user, layar login, pembatasan menu.
-3. **Kunci tanda tangan tetap** (release build)
-   - Buat keystore di Termux (`keytool`), simpan sebagai GitHub Secrets.
-   - Ubah workflow: `flutter build apk --release --split-per-abi`.
-   - Sekali pindah ke release tetap harus uninstall (tanda tangan berubah),
-     setelah itu update aman.
-4. **Pengaturan struk tambahan** (opsional, sesuai kebutuhan)
-   - Toggle sembunyikan: metode pembayaran, nama kasir, PPN, diskon per item,
-     catatan item. Perlu ubah mesin render struk (thermal + PDF).
-5. **QRIS statis** + konfirmasi manual (PromptPay sudah dihapus).
-6. **Printer Bluetooth thermal (ESC/POS)** — logika sudah ada di fitur label harga.
-7. **Ekspor CSV**: katalog, riwayat transaksi, ringkasan sesi (format sama dengan impor).
-8. **Buka/tutup kas**: sesi baru mulai dari nol, riwayat per sesi, uang masuk/keluar
-   dengan keterangan, saldo awal laci opsional.
-9. **Hapus fitur foto produk**; hapus tombol transaksi tertunda ganda.
-10. **Sinkronisasi antar perangkat (3–5 HP)** lewat server (belum dirancang;
-    rencana STB CasaOS/mini PC, bukan STB Android biasa).
-11. **Layout landscape**: cek lagi proporsi panel keranjang di perangkat asli;
-    sesuaikan bila terlalu lebar/sempit.
+Status per 17 Nov 2026: ✅ selesai · 🟡 sebagian · ⬜ belum
+
+| # | Area | Versi dasar | Status | Versi perbaikan | Status |
+|---|---|---|---|---|---|
+| 1 | Dasar | Release build (butuh kunci tanda tangan) | ⬜ | Layout landscape tablet | 🟡 (auto-rotate + keranjang kanan sudah) |
+| 1 | Dasar | Mata uang Rupiah saja | ✅ | Terjemahan lengkap (bukan sebagian) | 🟡 |
+| 1 | Dasar | Bahasa Indonesia | ✅ | Hapus fitur foto produk | ⬜ |
+| 2 | Model produk | Varian lewat nama produk | ✅ | Stok per varian | ⬜ |
+| 2 | Model produk | Stok on/off per produk | ✅ | Header & kolom CSV Bahasa Indonesia | ⬜ (setelah impor stabil) |
+| 3 | Buka/tutup kas | Sesi baru mulai nol + riwayat per sesi | ⬜ | Uang masuk/keluar + keterangan, saldo awal laci | ⬜ |
+| 4 | Struk | Hapus bagian tidak perlu | ⬜ | Toggle alamat + ucapan terima kasih editable | ✅ (sudah ada) |
+| 5 | Void per item | Void satu item dari nota | ⬜ | Stok otomatis kembali bila stok aktif | ⬜ (setelah stok per produk benar) |
+| 6 | PIN | Hapus PIN tiap akses | ⬜ | Akun owner/kasir + hak akses | ⬜ |
+| 7 | Printer | Cetak struk Bluetooth ESC/POS | ⬜ | — | — |
+| 8 | Layar penjualan | Hapus tombol transaksi tertunda dobel | ⬜ | — | — |
+| 9 | Ekspor | Ekspor CSV katalog (format sama dengan impor) | ⬜ | Ekspor riwayat + ringkasan sesi | ⬜ |
+| 10 | Pembayaran | Hapus PromptPay + QRIS statis konfirmasi manual | 🟡 (PromptPay sudah, QRIS belum) | QRIS via API penyedia | ⬜ |
+| 11 | Sinkronisasi | Sementara lewat ekspor/impor CSV | ⬜ | Real-time via server CasaOS/mini PC | ⬜ |
+
+Koreksi dari daftar awal:
+- Item 4 (perbaikan) **sudah ada**: toggle "Tampilkan info toko/alamat" dan catatan/
+  ucapan terima kasih yang bisa diedit, di Pengaturan → Struk.
+- Item 2 (dasar) juga sudah: varian lewat nama dan `lacak_stok` per produk sudah dipakai.
+- Item 10 (dasar): PromptPay sudah dihapus; QRIS statis belum.
+
+## Prioritas versi dasar (usulan urutan kerja)
+
+1. **Kunci tanda tangan + release build** — update tanpa uninstall, APK kecil, lebih halus.
+2. **Ekspor CSV katalog** — pelindung data; tanpa ini setiap uninstall menghapus 3.936 produk.
+3. **Void per item** (+ pengembalian stok) — dipakai hampir tiap hari.
+4. **Buka/tutup kas per sesi** — untuk tutup toko harian.
+5. **Hapus tombol transaksi tertunda dobel** — kecil dan cepat.
+6. **Hapus PIN tiap akses**, sementara proteksi hanya untuk Pengaturan.
+7. **Hapus fitur foto produk** — kecil, ikut mengecilkan APK.
+8. **QRIS statis + konfirmasi manual** — bisa ditunda bila tunai/transfer cukup.
+9. **Printer Bluetooth ESC/POS** — tunggu printer tersedia.
+10. **Sinkronisasi antar HP** — setelah versi dasar dipakai rutin.
+
+## Catatan risiko
+
+- Menghapus PIN tanpa akun pengganti membuat Pengaturan terbuka bagi siapa pun yang
+  memegang perangkat. Minimal pertahankan PIN khusus Pengaturan sampai akun selesai.
+- Void per item butuh migrasi database (kolom status void per baris barang).
+  Sebelum migrasi, buat ekspor CSV/backup dulu.
 
 ## Catatan data katalog (Qasir → CSV)
 

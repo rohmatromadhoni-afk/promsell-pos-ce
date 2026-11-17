@@ -4,16 +4,22 @@ Catatan lanjutan (terakhir diperbarui: 17 Nov 2026).
 
 - Repo: `rohmatromadhoni-afk/promsell-pos-ce` (fork, lisensi AGPL-3.0)
 - Workflow build: `.github/workflows/build-apk.yml` (tab Actions → Build APK)
-- Artifact: `promsell-debug-apk` → `app-prod-debug.apk` (±114 MB)
-- Perintah build: `flutter build apk --debug --flavor prod`
+- Artifact: `promsell-release-apk` → `app-prod-release.apk` (APK release bertanda tangan)
+- Perintah build: `flutter build apk --release --flavor prod --build-number=<nomor run>`
 - Flutter dikunci **3.47.9** (stable 3.50.0 merusak `flutter pub get`)
 
-## Cara update APK (sementara, sebelum ada kunci tanda tangan)
+## Cara update APK (sudah pakai kunci tetap)
 
-1. Setiap build dari Actions punya kunci debug baru → **tidak bisa menimpa** aplikasi lama.
-2. Jadi: uninstall → install APK baru → impor ulang 3 CSV katalog.
-3. Data hanya untuk tester, jadi aman. Setelah kunci tanda tangan tetap dibuat,
-   update berikutnya cukup install di atas aplikasi lama (data aman).
+1. Build release memakai **keystore tetap** dari 4 GitHub Secrets
+   (`KEYSTORE_BASE64`, `KEYSTORE_PASSWORD`, `KEY_ALIAS`, `KEY_PASSWORD`),
+   ditulis sementara ke `android/app/keystore.jks` saat CI berjalan.
+2. **Sekali saja**: uninstall aplikasi debug lama → install APK release ini.
+   Setelah itu semua update cukup **install di atas aplikasi lama**, data aman.
+3. Version code naik otomatis tiap build (`github.run_number`), jadi Android
+   selalu menganggapnya versi lebih baru.
+4. Cadangan keystore ada di HP (folder `~/.barokah-keys`) — **salin ke Google
+   Drive**. Kalau keystore + kata sandi hilang, update bertanda tangan sama
+   tidak bisa dibuat lagi dan aplikasi harus di-uninstall sekali lagi.
 
 ## Sudah selesai
 
@@ -25,6 +31,7 @@ Catatan lanjutan (terakhir diperbarui: 17 Nov 2026).
 | 17 Nov | `a044254` | Auto-rotate layar; promosi & PromptPay dihapus dari UI; desimal `.00` dihapus di semua tampilan harga |
 | 17 Nov | `ef359cd` | Landscape: keranjang selalu tampil menetap di kanan (katalog + panel keranjang), lebar 40% layar (min 280dp, maks 380dp) |
 | 17 Nov | `1a31dc7` | Nama aplikasi jadi **Barokah Karangsari**; akun owner/pegawai dengan login PIN sekali di awal + menu Kelola Pegawai |
+| 17 Nov | `e3954a6` | Build **release bertanda tangan tetap** (keystore di GitHub Secrets); artifact `promsell-release-apk`; version code naik tiap build |
 
 Catatan penting:
 - **Impor katalog berhasil** (3 bagian: 1.798 + 1.798 + 340 ≈ 3.936 produk).
@@ -64,12 +71,12 @@ Koreksi dari daftar awal:
 
 ## Prioritas versi dasar (usulan urutan kerja)
 
-1. **Kunci tanda tangan + release build** — update tanpa uninstall, APK kecil, lebih halus.
+1. ✅ **Kunci tanda tangan + release build** — sudah: update tanpa uninstall, APK lebih kecil.
 2. **Ekspor CSV katalog** — pelindung data; tanpa ini setiap uninstall menghapus 3.936 produk.
 3. **Void per item** (+ pengembalian stok) — dipakai hampir tiap hari.
 4. **Buka/tutup kas per sesi** — untuk tutup toko harian.
 5. **Hapus tombol transaksi tertunda dobel** — kecil dan cepat.
-6. **Hapus PIN tiap akses**, sementara proteksi hanya untuk Pengaturan.
+6. ✅ **Hapus PIN tiap akses** — sudah diganti akun owner/pegawai (login sekali).
 7. **Hapus fitur foto produk** — kecil, ikut mengecilkan APK.
 8. **QRIS statis + konfirmasi manual** — bisa ditunda bila tunai/transfer cukup.
 9. **Printer Bluetooth ESC/POS** — tunggu printer tersedia.

@@ -24,6 +24,7 @@ Catatan lanjutan (terakhir diperbarui: 17 Nov 2026).
 | 17 Nov | `e3f342f` | Bahasa: pilihan English + Indonesia, Thailand dihapus dari pilihan, default English, tanggal format Indonesia, onboarding mata uang Rupiah |
 | 17 Nov | `a044254` | Auto-rotate layar; promosi & PromptPay dihapus dari UI; desimal `.00` dihapus di semua tampilan harga |
 | 17 Nov | `ef359cd` | Landscape: keranjang selalu tampil menetap di kanan (katalog + panel keranjang), lebar 40% layar (min 280dp, maks 380dp) |
+| 17 Nov | `1a31dc7` | Nama aplikasi jadi **Barokah Karangsari**; akun owner/pegawai dengan login PIN sekali di awal + menu Kelola Pegawai |
 
 Catatan penting:
 - **Impor katalog berhasil** (3 bagian: 1.798 + 1.798 + 340 ≈ 3.936 produk).
@@ -48,7 +49,7 @@ Status per 17 Nov 2026: ✅ selesai · 🟡 sebagian · ⬜ belum
 | 3 | Buka/tutup kas | Sesi baru mulai nol + riwayat per sesi | ⬜ | Uang masuk/keluar + keterangan, saldo awal laci | ⬜ |
 | 4 | Struk | Hapus bagian tidak perlu | ⬜ | Toggle alamat + ucapan terima kasih editable | ✅ (sudah ada) |
 | 5 | Void per item | Void satu item dari nota | ⬜ | Stok otomatis kembali bila stok aktif | ⬜ (setelah stok per produk benar) |
-| 6 | PIN | Hapus PIN tiap akses | ⬜ | Akun owner/kasir + hak akses | ⬜ |
+| 6 | PIN/Akun | Login PIN sekali di awal (tanpa PIN tiap akses) | ✅ | Akun owner/kasir + hak akses per menu | 🟡 (owner+pegawai sudah; pembatasan aksi detail menyusul) |
 | 7 | Printer | Cetak struk Bluetooth ESC/POS | ⬜ | — | — |
 | 8 | Layar penjualan | Hapus tombol transaksi tertunda dobel | ⬜ | — | — |
 | 9 | Ekspor | Ekspor CSV katalog (format sama dengan impor) | ⬜ | Ekspor riwayat + ringkasan sesi | ⬜ |
@@ -108,3 +109,38 @@ Koreksi dari daftar awal:
 - Halaman impor: `lib/features/product/presentation/pages/product_csv_import_page.dart`.
 - Pencarian kode di GitHub hanya mencari nama file, bukan isi.
 - Lebih aman mengubah satu baris langsung di GitHub, lalu kirim log error yang relevan.
+
+## Akun & Pegawai (dipakai mulai 17 Nov)
+
+Cara pakai:
+1. Buka aplikasi pertama kali → muncul **Buat akun owner** (nama + PIN 4-6 angka).
+   Setelah dibuat, aplikasi langsung masuk sebagai owner.
+2. Setiap aplikasi dibuka/di-restart → layar **Masuk**; pilih akun lalu masukkan PIN.
+3. **Pengaturan → Akun & Pegawai**:
+   - **Kelola pegawai**: tambah pegawai (nama + PIN), atur akses, hapus pegawai.
+   - **Ubah PIN saya**: ganti PIN akun yang sedang dipakai.
+   - **Keluar**: kembali ke layar Masuk.
+4. Akses pegawai yang bisa dicentang: void transaksi, ubah produk, ubah stok,
+   ubah harga, lihat laporan, buka/tutup kas, pelanggan. Menjual selalu boleh.
+   **Pengaturan selalu hanya owner.**
+
+Yang perlu diketahui:
+- Akun disimpan di `app_settings` (key `appUsers`) sebagai hash PIN (PBKDF2),
+  bukan PIN mentah. Tidak ada migrasi database, dan ikut backup pengaturan.
+- Setelah akun dibuat, **PIN per-akses lama otomatis dimatikan** sehingga
+  void/stok/harga tidak lagi bertanya PIN. Halaman App Lock lama tidak dipakai.
+- **Belum ada pemulihan PIN**: kalau owner lupa PIN, satu-satunya jalan adalah
+  hapus data aplikasi (katalog & transaksi hilang) atau restore backup settings.
+  Catat PIN owner di tempat aman.
+- Pembatasan saat ini baru di tingkat menu: Laporan & Pengaturan disembunyikan,
+  tombol Void disembunyikan, shortcut beranda mengikuti izin. Tombol ubah
+  stok/harga/produk belum dicek per aksi — menyusul.
+- Pegawai tidak bisa menghapus akun owner; minimal satu owner selalu ada.
+
+Berkas utama:
+- `lib/features/accounts/domain/app_user.dart` — entitas + daftar izin.
+- `lib/features/accounts/data/account_service.dart` — simpan/verifikasi akun.
+- `lib/features/accounts/presentation/pages/account_gate.dart` — gate startup.
+- `lib/features/accounts/presentation/pages/auth_pages.dart` — buat owner + login.
+- `lib/features/accounts/presentation/pages/account_settings_page.dart` — kelola pegawai.
+- `lib/core/shell/main_shell.dart` — menu tab mengikuti izin.

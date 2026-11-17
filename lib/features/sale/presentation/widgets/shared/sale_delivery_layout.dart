@@ -56,8 +56,11 @@ class _SaleDeliveryLayoutState extends State<SaleDeliveryLayout> {
     final isUltra = context.select(
       (SettingsCubit c) => c.state.settings.ultraCompactMode,
     );
+    final isLandscape =
+        MediaQuery.orientationOf(context) == Orientation.landscape;
 
-    if (isUltra) {
+    // Landscape keeps the docked cart even in ultra-compact mode.
+    if (isUltra && !isLandscape) {
       return Stack(
         children: [
           _buildCatalog(

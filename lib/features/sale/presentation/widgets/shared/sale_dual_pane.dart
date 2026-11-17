@@ -39,14 +39,23 @@ class SaleDualPane extends StatelessWidget {
 
     return LayoutBuilder(
       builder: (context, constraints) {
-        if (constraints.maxWidth >= pos.tabletSplitBreakpoint) {
+        // Landscape always docks the cart: the user asked for the cart to be
+        // permanently visible on the right instead of hidden behind a button.
+        final isLandscape =
+            MediaQuery.orientationOf(context) == Orientation.landscape;
+        final shouldDock =
+            isLandscape || constraints.maxWidth >= pos.tabletSplitBreakpoint;
+
+        if (shouldDock) {
+          final cartWidth = constraints.maxWidth >= pos.tabletSplitBreakpoint
+              ? pos.dockedCartWidth
+              : (constraints.maxWidth * 0.4)
+                    .clamp(280.0, pos.dockedCartWidth)
+                    .toDouble();
           return Row(
             children: [
-              Expanded(flex: 5, child: _buildCatalog(bottomContentInset: 16)),
-              SizedBox(
-                width: pos.dockedCartWidth,
-                child: const DockedCartPanel(),
-              ),
+              Expanded(child: _buildCatalog(bottomContentInset: 16)),
+              SizedBox(width: cartWidth, child: const DockedCartPanel()),
             ],
           );
         }
